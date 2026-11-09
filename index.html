@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Stockholm Eats">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px;font-family:system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body>
+<title>Rozbeh & Karro's Stockholm</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dense phone list — compact sticky header (title, search+sort, two chip rails), grouped hairline rows, tap a row for a detail sheet. */
+:root{
+  --bg:#F3F4F6; --surface:#FFFFFF; --sunk:#ECEEF2; --line:#E2E5EA;
+  --ink:#15181E; --muted:#6A707C;
+  --accent:#2448C7; --accent-ink:#FFFFFF; --accent-soft:#E6EBFB;
+  --star:#C8890E; --agree:#17845A; --warn:#B4530F;
+  --scrim:rgba(10,14,24,.45);
+  --display:"Bricolage Grotesque",ui-rounded,system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1014; --surface:#171A20; --sunk:#20242C; --line:#2A2F38;
+  --ink:#ECEEF2; --muted:#9AA1AE; --accent:#8EA6FF; --accent-ink:#0B1230; --accent-soft:#1E2747;
+  --star:#F0B848; --agree:#4FD39A; --warn:#F29A5B; --scrim:rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1014; --surface:#171A20; --sunk:#20242C; --line:#2A2F38;
+  --ink:#ECEEF2; --muted:#9AA1AE; --accent:#8EA6FF; --accent-ink:#0B1230; --accent-soft:#1E2747;
+  --star:#F0B848; --agree:#4FD39A; --warn:#F29A5B; --scrim:rgba(0,0,0,.6); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.35;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:680px;margin:0 auto;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+@media (min-width:420px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+header .wrap{padding-block:10px 6px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.top{display:flex;align-items:center;gap:10px}
+h1{font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:-.02em;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--muted);margin-left:6px;vertical-align:middle}
+.dot.ok{background:var(--agree)}
+.me{display:flex;background:var(--sunk);border-radius:999px;padding:2px;flex:none}
+.me button{border:0;background:none;padding:4px 10px;border-radius:999px;font-weight:600;font-size:.8rem;color:var(--muted)}
+.me button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.searchrow{display:flex;gap:6px}
+.search{flex:1;min-width:0;border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:8px 11px;font-size:16px}
+.sort{flex:none;border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:0 8px;font-size:.82rem;font-weight:600;max-width:40%}
+.rail{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1*max(14px,env(safe-area-inset-left,0px)));padding-inline:max(14px,env(safe-area-inset-left,0px))}
+.rail::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 10px;font-size:.8rem;font-weight:600;white-space:nowrap;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip .n{font-weight:500;opacity:.55;margin-left:3px;font-variant-numeric:tabular-nums}
+.rail.small .chip{border:0;background:none;color:var(--muted);padding:3px 8px}
+.rail.small .chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+
+main{padding-block:10px 110px}
+.status{color:var(--muted);font-size:.78rem;margin:0 2px 8px;display:flex;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.list{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.group{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.ghead{display:flex;align-items:baseline;gap:6px;padding-inline:2px}
+.ghead h2{font-family:var(--display);font-weight:700;font-size:1rem;margin:0;flex:1;min-width:0;letter-spacing:-.01em}
+.ghead span{color:var(--muted);font-size:.75rem;font-weight:600;font-variant-numeric:tabular-nums}
+.rows{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ri{display:flex;align-items:center;gap:10px;padding:8px 10px 8px 12px;border-top:1px solid var(--line);cursor:pointer}
+.ri:first-child{border-top:0}
+.ri:active{background:var(--sunk)}
+.ri-main{flex:1;min-width:0}
+.ri-name{font-weight:700;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ri-name .tag{font-size:.75rem;margin-left:4px}
+.ri-meta{color:var(--muted);font-size:.76rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;margin-top:1px}
+.ri-meta .star{color:var(--star)}
+.ri-meta .closed{color:var(--warn);font-weight:600}
+.ri-meta .want{color:var(--accent);font-weight:600}
+.ri-votes{display:flex;gap:4px;flex:none}
+.v{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--bg);border-radius:8px;height:30px;min-width:44px;padding:0 6px;justify-content:center}
+.v b{font-size:.66rem;font-weight:700;color:var(--muted)}
+.v i{font-style:normal;font-size:1rem;line-height:1}
+.v i.e{font-size:.8rem;color:var(--muted);opacity:.6}
+.v.mine{border-color:var(--accent)}
+.v.mine b{color:var(--accent)}
+.empty{text-align:center;color:var(--muted);padding:36px 16px}
+.empty b{display:block;font-family:var(--display);font-size:1.1rem;color:var(--ink);margin-bottom:4px}
+
+.fab{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;display:flex;gap:8px}
+.fab button{border:0;border-radius:999px;height:48px;font-weight:700;box-shadow:0 6px 18px rgba(10,14,24,.25)}
+.fab .add{background:var(--accent);color:var(--accent-ink);padding:0 18px}
+.fab .dice{background:var(--surface);color:var(--ink);width:48px;font-size:1.2rem;border:1px solid var(--line)}
+
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--surface);width:100%;max-width:680px;border-radius:18px 18px 0 0;max-height:88%;overflow-y:auto;padding:16px max(16px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));animation:up .18s ease-out}
+.sheet::before{content:"";display:block;width:36px;height:4px;border-radius:2px;background:var(--line);margin:-6px auto 12px}
+@keyframes up{from{transform:translateY(24px);opacity:.6}}
+@media (prefers-reduced-motion:reduce){.sheet{animation:none}}
+.sheet h3{font-family:var(--display);font-size:1.3rem;margin:0 0 2px;letter-spacing:-.01em}
+.sheet .sub{color:var(--muted);font-size:.86rem;margin:0 0 12px}
+.d-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.d-vote{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:10px}
+.d-vote b{font-size:.75rem;color:var(--muted)}
+.d-vote span{font-size:1.6rem;line-height:1.1}
+.d-vote span.e{font-size:.85rem;color:var(--accent);font-weight:700;padding:6px 0}
+.d-actions{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.pill{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:600;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.pill .star{color:var(--star)}
+.pill.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.badge{font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:999px}
+.badge.match{background:color-mix(in srgb,var(--agree) 15%,transparent);color:var(--agree)}
+.badge.split{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.note{font-size:.88rem;background:var(--sunk);border-radius:10px;padding:8px 10px;margin-bottom:10px;overflow-wrap:anywhere}
+.scale{display:grid;gap:6px}
+.scale button{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:9px 12px;text-align:left}
+.scale button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.scale .em{font-size:1.5rem;width:32px;text-align:center}
+.scale .lbl{font-weight:700}
+.scale .ds{font-size:.8rem;color:var(--muted)}
+.form{display:grid;gap:12px}
+.form label{display:grid;gap:4px;font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.form input,.form textarea{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 12px;font-size:16px;text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink)}
+.cats{display:flex;flex-wrap:wrap;gap:6px}
+.row{display:flex;gap:8px}
+.row>*{flex:1;min-width:0}
+.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:700}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:var(--sunk);color:var(--ink)}
+.btn.danger{background:none;color:var(--warn);border:1px solid var(--line)}
+.seg{display:flex;gap:4px}
+.seg button{border:1px solid var(--line);background:none;padding:6px 10px;border-radius:8px;font-size:.84rem;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.pick{text-align:center;padding:6px 0}
+.pick .big{font-family:var(--display);font-size:1.9rem;font-weight:800;margin:4px 0;overflow-wrap:anywhere}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--surface);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.86rem;z-index:30;max-width:calc(100% - 32px)}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <h1>Rozbeh & Karro's Stockholm<span class="dot" id="dot" title="Connecting…"></span></h1>
+      <div class="me" role="group" aria-label="Who are you?">
+        <button id="me-r" data-me="rozbeh">Rozbeh</button>
+        <button id="me-k" data-me="karro">Karro</button>
+      </div>
+    </div>
+    <div class="searchrow">
+      <input id="q" class="search" type="search" placeholder="Search name, area, dish…" autocomplete="off">
+      <select id="sort" class="sort" aria-label="Sort">
+        <option value="best">Best rated</option>
+        <option value="google">Google ★</option>
+        <option value="az">A–Ö</option>
+        <option value="new">Newest</option>
+      </select>
+    </div>
+    <div class="rail" id="rail"></div>
+    <div class="rail small" id="seg"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="status"><span id="count">Connecting…</span><span id="stats"></span></div>
+  <div class="list" id="list">
+    <div class="empty"><b>Loading your places…</b>Your restaurants, bars and brunch spots appear here. Tap “＋ Add” to add one.</div>
+  </div>
+</main>
+
+<div class="fab">
+  <button class="dice" id="dice" aria-label="Pick a random place">🎲</button>
+  <button class="add" id="add">＋ Add</button>
+</div>
+
+<div id="sheetHost"></div>
+<div id="toastHost"></div>
+
+<script>
+const BASE_CATS = [
+  {id:"italian", label:"Italian", e:"🇮🇹"},
+  {id:"pizza", label:"Pizza", e:"🍕"},
+  {id:"meat", label:"Meat & grill", e:"🥩"},
+  {id:"burger", label:"Burgers", e:"🍔"},
+  {id:"asian", label:"Asian & sushi", e:"🍣"},
+  {id:"seafood", label:"Seafood", e:"🦞"},
+  {id:"med", label:"Greek & Middle East", e:"🫒"},
+  {id:"latin", label:"Latin & tapas", e:"🌮"},
+  {id:"swedish", label:"Bistro & Swedish", e:"🇸🇪"},
+  {id:"aw", label:"Wine & AW", e:"🍷"},
+  {id:"cocktails", label:"Cocktails", e:"🍸"},
+  {id:"brunch", label:"Brunch", e:"🥞"},
+  {id:"fika", label:"Fika", e:"🥐"},
+];
+let CATS=[...BASE_CATS], CAT={}, customCats={};
+function rebuildCats(){
+  const extra=Object.entries(customCats).map(([id,c])=>({id,label:String(c.label||"Other").slice(0,30),e:String(c.e||"📌").slice(0,8),t:c.createdAt||0})).sort((a,b)=>a.t-b.t);
+  CATS=[...BASE_CATS,...extra]; CAT=Object.fromEntries(CATS.map(c=>[c.id,c]));
+}
+rebuildCats();
+const SCALE = [
+  {e:"😮‍💨", v:6, l:"Life-changing", d:"Still thinking about it"},
+  {e:"🔥", v:5, l:"Fire", d:"Top tier, go back ASAP"},
+  {e:"🤌🏼", v:4, l:"Chef's kiss", d:"Excellent"},
+  {e:"🌟", v:3, l:"Great", d:"Really good night"},
+  {e:"👍🏻", v:2, l:"Good", d:"Solid, nothing wild"},
+  {e:"🥴", v:1, l:"Meh", d:"Wouldn't rush back"},
+  {e:"🤢", v:0, l:"Never again", d:"Skip it"},
+];
+const VAL = Object.fromEntries(SCALE.map(s=>[s.e,s.v]));
+const NAMES = {rozbeh:"Rozbeh", karro:"Karro"};
+
+let db = null, places = [], loaded = false;
+let st = {cat:"all", seg:"all", sort:"best", q:""};
+let me = null;
+try{ me = localStorage.getItem("me"); const s = JSON.parse(localStorage.getItem("ui")||"null"); if(s) st = {...st, ...s, q:""}; }catch(e){}
+
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function saveUi(){ try{ localStorage.setItem("ui", JSON.stringify({cat:st.cat,seg:st.seg,sort:st.sort})); }catch(e){} }
+function toast(msg){ const t=document.createElement("div"); t.className="toast"; t.textContent=msg; $("#toastHost").replaceChildren(t); setTimeout(()=>t.remove(),2200); }
+
+function score(p){
+  const vs=[p.rozbeh,p.karro].filter(x=>x in VAL).map(x=>VAL[x]);
+  if(vs.length) return vs.reduce((a,b)=>a+b,0)/vs.length;
+  if(p.listRating in VAL) return VAL[p.listRating];
+  return null;
+}
+function scoreEmoji(s){ if(s==null) return null; const r=Math.round(s); return SCALE.find(x=>x.v===r).e; }
+function isMatch(p){ return VAL[p.rozbeh]>=5 && VAL[p.karro]>=5; }
+function isSplit(p){ return (p.rozbeh in VAL)&&(p.karro in VAL)&&Math.abs(VAL[p.rozbeh]-VAL[p.karro])>=3; }
+function fmtCount(n){ return n>=1000 ? (n/1000).toFixed(n>=10000?0:1).replace(".0","")+"k" : String(n); }
+function mapsUrl(p){ if(p.googleMapsUri && /^https:\/\/maps\.google\.com\//.test(p.googleMapsUri)) return p.googleMapsUri; return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([p.name,p.area,"Stockholm"].filter(Boolean).join(" ")); }
+
+function filtered(){
+  const q=st.q.trim().toLowerCase();
+  let r=places.filter(p=>{
+    if(st.cat!=="all" && !(p.cats||[]).includes(st.cat)) return false;
+    if(st.seg==="been" && p.status!=="been") return false;
+    if(st.seg==="want" && p.status!=="want") return false;
+    if(st.seg==="unrated" && (!me || p[me])) return false;
+    if(st.seg==="match" && !isMatch(p)) return false;
+    if(st.seg==="split" && !isSplit(p)) return false;
+    if(q && !(`${p.name} ${p.area} ${p.note}`.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  const az=(a,b)=>a.name.localeCompare(b.name,"sv");
+  if(st.sort==="az") r.sort(az);
+  else if(st.sort==="new") r.sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
+  else if(st.sort==="google") r.sort((a,b)=>(b.google??-1)-(a.google??-1)||az(a,b));
+  else r.sort((a,b)=>(score(b)??-1)-(score(a)??-1)||az(a,b));
+  return r;
+}
+
+function renderChrome(){
+  ["r","k"].forEach(k=>{ const b=$("#me-"+k); b.setAttribute("aria-pressed", String(b.dataset.me===me)); });
+  const counts={all:places.length}; places.forEach(p=>(p.cats||[]).forEach(c=>counts[c]=(counts[c]||0)+1));
+  $("#rail").innerHTML=[{id:"all",label:"All",e:"✨"},...CATS].map(c=>
+    `<button class="chip" data-cat="${c.id}" aria-pressed="${st.cat===c.id}">${c.e} ${esc(c.label)}<span class="n">${counts[c.id]||0}</span></button>`).join("");
+  const segs=[["all","All"],["been","Been"],["want","Want to try"],["unrated",me?`Not rated by ${NAMES[me]}`:"Not rated by me"],["match","🤝 We agree"],["split","⚡ Disagree"]];
+  $("#seg").innerHTML=segs.map(([k,l])=>`<button class="chip" data-seg="${k}" aria-pressed="${st.seg===k}">${esc(l)}</button>`).join("");
+  $("#sort").value=st.sort;
+}
+
+function vChip(p,who){
+  const v=p[who];
+  return `<button class="v${me===who?" mine":""}" data-vote="${who}" data-id="${esc(p.id)}" aria-label="${NAMES[who]}'s rating for ${esc(p.name)}"><b>${NAMES[who][0]}</b>${v?`<i>${v}</i>`:`<i class="e">＋</i>`}</button>`;
+}
+function closedTxt(p){ return p.businessStatus==="CLOSED_PERMANENTLY"?"Closed for good":p.businessStatus==="CLOSED_TEMPORARILY"?"Temporarily closed":""; }
+function rowItem(p){
+  const bits=[];
+  if(p.google!=null) bits.push(`<span class="star">★</span> ${Number(p.google).toFixed(1)}${p.googleCount?` (${fmtCount(p.googleCount)})`:""}`);
+  if(p.area) bits.push(esc(p.area));
+  if(st.cat==="all" && (p.cats||[]).length>1) bits.push((p.cats||[]).slice(1).map(c=>CAT[c]?esc(CAT[c].e):"").join(""));
+  const c=closedTxt(p); if(c) bits.push(`<span class="closed">${c}</span>`);
+  if(p.status==="want") bits.push(`<span class="want">Want to try</span>`);
+  const tag=isMatch(p)?`<span class="tag" title="You both love it">🤝</span>`:isSplit(p)?`<span class="tag" title="You disagree">⚡</span>`:"";
+  return `<div class="ri" data-open="${esc(p.id)}" role="button" tabindex="0">
+    <div class="ri-main"><div class="ri-name">${esc(p.name)}${tag}</div><div class="ri-meta">${bits.join(" · ")||"&nbsp;"}</div></div>
+    <div class="ri-votes">${vChip(p,"rozbeh")}${vChip(p,"karro")}</div>
+  </div>`;
+}
+function render(){
+  renderChrome();
+  if(!loaded) return;
+  const r=filtered();
+  const been=places.filter(p=>p.status==="been").length;
+  $("#count").textContent=`${r.length} of ${places.length} places`;
+  $("#stats").textContent=`${been} been · ${places.length-been} to try · ${places.filter(isMatch).length} 🤝`;
+  const groups=CATS.map(c=>({c,items:r.filter(p=>(st.cat==="all"?(p.cats||[])[0]:st.cat)===c.id)})).filter(g=>g.items.length);
+  const other=r.filter(p=>!CAT[(p.cats||[])[0]]);
+  if(st.cat==="all"&&other.length) groups.push({c:{label:"Other",e:"📌"},items:other});
+  $("#list").innerHTML = r.length ? groups.map(g=>`<section class="group"><div class="ghead"><h2>${esc(g.c.e)} ${esc(g.c.label)}</h2><span>${g.items.length}</span></div><div class="rows">${g.items.map(rowItem).join("")}</div></section>`).join("") :
+    places.length ? `<div class="empty"><b>Nothing here</b>Try another category or clear the search.</div>`
+                  : `<div class="empty"><b>No places yet</b>Tap “＋ Add” to add your first restaurant.</div>`;
+}
+function detailSheet(p){
+  const cats=(p.cats||[]).map(c=>CAT[c]?CAT[c].e+" "+CAT[c].label:"").filter(Boolean).join(" · ");
+  const sub=[cats,p.googleAddress||p.area].filter(Boolean).map(esc).join(" — ");
+  const g=p.google!=null?`<span class="star">★</span> ${Number(p.google).toFixed(1)}${p.googleCount?` · ${fmtCount(p.googleCount)} reviews`:""}`:`★ Add Google rating`;
+  const dv=who=>`<button class="d-vote" data-dvote="${who}"><b>${NAMES[who]}</b>${p[who]?`<span>${p[who]}</span>`:`<span class="e">＋ Rate</span>`}</button>`;
+  const c=closedTxt(p);
+  openSheet(`<h3>${esc(p.name)}</h3><p class="sub">${sub}</p>
+    <div class="d-grid">${dv("rozbeh")}${dv("karro")}</div>
+    ${p.note?`<div class="note">${esc(p.note)}</div>`:""}
+    <div class="d-actions">
+      ${isMatch(p)?`<span class="badge match">🤝 Both love it</span>`:""}${isSplit(p)?`<span class="badge split">⚡ You disagree</span>`:""}${c?`<span class="badge split">${c}</span>`:""}
+    </div>
+    <div class="d-actions">
+      <button class="pill${p.status==="been"?" on":""}" id="d-st">${p.status==="been"?"✓ Been":"🔖 Want to try"}</button>
+      <button class="pill" id="d-g">${g}</button>
+      <a class="pill" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Maps</a>
+      <button class="pill" id="d-ed">✎ Edit</button>
+    </div>`, sh=>{
+    sh.querySelectorAll("[data-dvote]").forEach(b=>b.onclick=()=>voteSheet(p,b.dataset.dvote));
+    sh.querySelector("#d-st").onclick=async()=>{ closeSheet(); await write(p.id,{status:p.status==="been"?"want":"been"}); };
+    sh.querySelector("#d-g").onclick=()=>googleSheet(p);
+    sh.querySelector("#d-ed").onclick=()=>editSheet(p);
+  });
+}
+
+/* ---------- sheets ---------- */
+function openSheet(html, onMount){
+  const host=$("#sheetHost");
+  host.innerHTML=`<div class="scrim" id="scrim"><div class="sheet" role="dialog" aria-modal="true">${html}</div></div>`;
+  $("#scrim").addEventListener("click",e=>{ if(e.target.id==="scrim") closeSheet(); });
+  onMount&&onMount(host.querySelector(".sheet"));
+}
+function closeSheet(){ $("#sheetHost").innerHTML=""; }
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeSheet(); });
+
+async function write(id, data){
+  if(!db){ toast("Not connected — changes can't be saved right now"); return false; }
+  try{ await db.collection("places").doc(id).update(data); return true; }
+  catch(e){ toast(e && e.code==="permission-denied" ? "Saving is blocked by the database rules" : "Couldn't save. Check your connection and try again."); return false; }
+}
+
+function voteSheet(p, who){
+  openSheet(`<h3>${esc(p.name)}</h3><p class="sub">${NAMES[who]}'s rating</p>
+    <div class="scale">${SCALE.map(s=>`<button data-e="${s.e}" aria-pressed="${p[who]===s.e}"><span class="em">${s.e}</span><span><div class="lbl">${s.l}</div><div class="ds">${s.d}</div></span></button>`).join("")}</div>
+    <div class="row" style="margin-top:12px"><button class="btn ghost" id="clr">Clear rating</button><button class="btn ghost" id="cx">Cancel</button></div>`,
+  sh=>{
+    sh.querySelectorAll("[data-e]").forEach(b=>b.onclick=async()=>{ closeSheet(); const d={[who]:b.dataset.e}; if(p.status!=="been") d.status="been"; await write(p.id,d); });
+    sh.querySelector("#clr").onclick=async()=>{ closeSheet(); await write(p.id,{[who]:null}); };
+    sh.querySelector("#cx").onclick=closeSheet;
+  });
+}
+function googleSheet(p){
+  openSheet(`<h3>${esc(p.name)}</h3><p class="sub">Open it in Google Maps, then type the star rating you see.</p>
+    <form class="form" id="gf">
+      <a class="btn ghost" style="text-align:center;text-decoration:none;color:var(--ink)" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+      <label>Google rating (1.0–5.0)<input id="gval" type="number" inputmode="decimal" step="0.1" min="1" max="5" value="${p.google??""}"></label>
+      <div class="row"><button type="button" class="btn ghost" id="cx">Cancel</button><button class="btn primary">Save</button></div>
+    </form>`, sh=>{
+    sh.querySelector("#cx").onclick=closeSheet;
+    sh.querySelector("#gf").onsubmit=async e=>{ e.preventDefault(); const raw=sh.querySelector("#gval").value.replace(",","."); const v=raw===""?null:Math.round(parseFloat(raw)*10)/10;
+      if(v!=null && !(v>=1&&v<=5)){ toast("Enter a number between 1 and 5"); return; }
+      closeSheet(); await write(p.id,{google:v}); };
+  });
+}
+function editSheet(p){
+  const isNew=!p; p=p||{name:"",area:"",note:"",cats:st.cat!=="all"?[st.cat]:[],status:"want",google:null};
+  let cats=[...(p.cats||[])]; let status=p.status||"want";
+  openSheet(`<h3>${isNew?"Add a place":"Edit place"}</h3><p class="sub">${isNew?"It shows up for both of you right away.":"Changes save for both of you."}</p>
+    <form class="form" id="ef">
+      <label>Name<input id="f-name" required value="${esc(p.name)}" placeholder="e.g. Tako"></label>
+      <div><div style="font-size:.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Type (pick one or more)</div>
+        <div class="cats" id="f-cats"></div>
+        <div class="row" id="f-ncrow" hidden style="margin-top:8px;align-items:center">
+          <input id="f-nce" maxlength="8" placeholder="🇮🇷" aria-label="Emoji for the new type" style="flex:0 0 64px;text-align:center">
+          <input id="f-ncn" maxlength="30" placeholder="e.g. Persian" aria-label="Name of the new type">
+          <button type="button" class="btn primary" id="f-ncadd" style="flex:none;padding:10px 14px">Add</button>
+        </div></div>
+      <label>Area or address<input id="f-area" value="${esc(p.area)}" placeholder="e.g. Vasastan"></label>
+      <label>Notes (what to order, who recommended it)<textarea id="f-note" rows="2">${esc(p.note)}</textarea></label>
+      <label>Google rating<input id="f-g" type="number" inputmode="decimal" step="0.1" min="1" max="5" value="${p.google??""}" placeholder="e.g. 4.5"></label>
+      <div class="seg" id="f-st" style="flex:none"><button type="button" data-s="want" aria-pressed="${status==="want"}">🔖 Want to try</button><button type="button" data-s="been" aria-pressed="${status==="been"}">✓ Been there</button></div>
+      <div class="row"><button type="button" class="btn ghost" id="cx">Cancel</button><button class="btn primary">${isNew?"Add place":"Save"}</button></div>
+      ${isNew?"":`<button type="button" class="btn danger" id="del">Delete place</button>`}
+    </form>`, sh=>{
+    const box=sh.querySelector("#f-cats"), ncrow=sh.querySelector("#f-ncrow");
+    const drawCats=()=>{
+      box.innerHTML=CATS.map(c=>`<button type="button" class="chip" data-c="${esc(c.id)}" aria-pressed="${cats.includes(c.id)}">${esc(c.e)} ${esc(c.label)}</button>`).join("")
+        +`<button type="button" class="chip" id="f-newcat" style="border-style:dashed;color:var(--copper)">＋ New type</button>`;
+      box.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{ const c=b.dataset.c; cats=cats.includes(c)?cats.filter(x=>x!==c):[...cats,c]; b.setAttribute("aria-pressed",String(cats.includes(c))); });
+      box.querySelector("#f-newcat").onclick=()=>{ ncrow.hidden=false; sh.querySelector("#f-ncn").focus(); };
+    };
+    drawCats();
+    sh.querySelector("#f-ncadd").onclick=async()=>{
+      const label=sh.querySelector("#f-ncn").value.trim(); if(!label){ toast("Type a name for the new type"); return; }
+      const emoji=sh.querySelector("#f-nce").value.trim()||"📌";
+      const found=CATS.find(c=>c.label.toLowerCase()===label.toLowerCase());
+      let id=found?found.id:null;
+      if(!id){
+        const slug=label.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+        id="c-"+(slug||Date.now());
+        const doc={label,e:emoji,createdAt:Date.now()};
+        customCats[id]=doc; rebuildCats();
+        if(db){ try{ await db.collection("categories").doc(id).set(doc); toast(`Added the type ${emoji} ${label}`); }catch(e){ toast("Couldn't save the new type. Try again."); } }
+      }
+      if(!cats.includes(id)) cats=[...cats,id];
+      sh.querySelector("#f-ncn").value=""; sh.querySelector("#f-nce").value=""; ncrow.hidden=true; drawCats(); renderChrome();
+    };
+    sh.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{ status=b.dataset.s; sh.querySelectorAll("[data-s]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.s===status))); });
+    sh.querySelector("#cx").onclick=closeSheet;
+    const del=sh.querySelector("#del");
+    if(del){ let armed=false; del.onclick=async()=>{ if(!armed){ armed=true; del.textContent="Tap again to delete for both of you"; return; }
+      closeSheet(); try{ await db.collection("places").doc(p.id).delete(); toast(`Deleted ${p.name}`);}catch(e){ toast("Couldn't delete. Try again."); } }; }
+    sh.querySelector("#ef").onsubmit=async e=>{ e.preventDefault();
+      const name=sh.querySelector("#f-name").value.trim(); if(!name) return;
+      if(!cats.length){ toast("Pick at least one type"); return; }
+      const graw=sh.querySelector("#f-g").value.replace(",","."); const g=graw===""?null:Math.round(parseFloat(graw)*10)/10;
+      if(g!=null && !(g>=1&&g<=5)){ toast("Google rating must be between 1 and 5"); return; }
+      const data={name,cats,area:sh.querySelector("#f-area").value.trim(),note:sh.querySelector("#f-note").value.trim(),google:g,status};
+      if(!db){ toast("Not connected — can't save right now"); return; }
+      closeSheet();
+      try{
+        if(isNew){ await db.collection("places").add({...data,rozbeh:null,karro:null,listRating:null,createdAt:Date.now()}); toast(`Added ${name}`); }
+        else { await write(p.id,data); }
+      }catch(err){ toast("Couldn't save. Check your connection and try again."); }
+    };
+  });
+}
+function diceSheet(){
+  let pool=filtered(); if(!pool.length){ toast("No places in this view to pick from"); return; }
+  const pick=()=>{ // weighted: higher-rated and want-to-try get more chances
+    const w=pool.map(p=>1+(score(p)??2)+(p.status==="want"?2:0)); let t=Math.random()*w.reduce((a,b)=>a+b,0);
+    for(let i=0;i<pool.length;i++){ t-=w[i]; if(t<=0) return pool[i]; } return pool[0]; };
+  const show=()=>{ const p=pick(); const s=scoreEmoji(score(p));
+    openSheet(`<div class="pick"><p class="sub">Tonight you're going to…</p><div class="big">${esc(p.name)}</div>
+      <p class="sub">${esc([(p.cats||[]).map(c=>CAT[c]?.e).join(" "),p.area].filter(Boolean).join(" · "))} ${s?" · "+s:""}</p>
+      ${p.note?`<div class="note" style="margin-bottom:12px">${esc(p.note)}</div>`:""}
+      <div class="row"><button class="btn ghost" id="again">🎲 Roll again</button><a class="btn primary" style="text-align:center;text-decoration:none" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Maps</a></div>
+      <p class="sub" style="margin-top:10px">Picks from what's on screen now. Filter first, e.g. 🍕 Pizza + Want to try.</p></div>`,
+      sh=>sh.querySelector("#again").onclick=show); };
+  show();
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button,a,[data-open]"); if(!t) return;
+  if(t.dataset.open && !t.matches("button,a")){ const p=places.find(x=>x.id===t.dataset.open); if(p) detailSheet(p); return; }
+  if(t.dataset.me){ me=t.dataset.me; try{localStorage.setItem("me",me);}catch(_){} render(); return; }
+  if(t.dataset.cat){ st.cat=t.dataset.cat; saveUi(); render(); return; }
+  if(t.dataset.seg){ if(t.dataset.seg==="unrated"&&!me){ toast("Pick Rozbeh or Karro at the top first"); return; } st.seg=t.dataset.seg; saveUi(); render(); return; }
+  const byId=id=>places.find(p=>p.id===id);
+  if(t.dataset.vote){ e.stopPropagation(); const p=byId(t.dataset.id); if(p) voteSheet(p,t.dataset.vote); return; }
+  if(t.dataset.google){ const p=byId(t.dataset.google); if(p) googleSheet(p); return; }
+  if(t.dataset.edit){ const p=byId(t.dataset.edit); if(p) editSheet(p); return; }
+  if(t.dataset.status){ const p=byId(t.dataset.status); if(p) write(p.id,{status:p.status==="been"?"want":"been"}); return; }
+});
+document.addEventListener("keydown",e=>{ const t=e.target.closest&&e.target.closest("[data-open]"); if(t&&(e.key==="Enter"||e.key===" ")&&e.target===t){ e.preventDefault(); const p=places.find(x=>x.id===t.dataset.open); if(p) detailSheet(p); } });
+$("#q").addEventListener("input",e=>{ st.q=e.target.value; render(); });
+$("#sort").addEventListener("change",e=>{ st.sort=e.target.value; saveUi(); render(); });
+$("#add").onclick=()=>editSheet(null);
+$("#dice").onclick=diceSheet;
+
+render();
+
+/* ---------- live shared data ---------- */
+function syncMsg(t,d){ $("#count").textContent=""; $("#list").innerHTML=`<div class="empty"><b>${esc(t)}</b>${esc(d)}</div>`; }
+(async()=>{
+  const timer=setTimeout(()=>{ if(!loaded){ syncMsg("Couldn't reach the shared list","Close and reopen the page to try again."); } },10000);
+  try{
+    firebase.initializeApp(window.FIREBASE_CONFIG);
+    db = firebase.firestore();
+  }catch(e){ db=null; }
+  if(!db){ clearTimeout(timer); syncMsg("Couldn't start the database","Check firebase-config.js in the repo."); return; }
+  db.collection("categories").limit(200).onSnapshot(snap=>{
+    customCats=Object.fromEntries(snap.docs.map(d=>[d.id,d.data()||{}])); rebuildCats(); render();
+  },()=>{});
+  db.collection("places").limit(1000).onSnapshot(snap=>{
+    clearTimeout(timer);
+    places=snap.docs.map(d=>({id:d.id,...d.data()}));
+    loaded=true; $("#dot").classList.add("ok"); $("#dot").title="Synced"; render();
+  },err=>{ clearTimeout(timer); if(err&&err.code==="permission-denied") syncMsg("No access","The database rules block reading. Check Firestore rules."); else toast("Lost connection. Reopen the page to retry."); });
+})();
+</script>
+
+</body>
+</html>

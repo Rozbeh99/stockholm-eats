@@ -1,0 +1,2797 @@
+{
+ "20hundra5": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000124,
+  "google": 4.6,
+  "googleAddress": "Sankt Eriksgatan 102, 113 31 Stockholm, Sverige",
+  "googleCount": 479,
+  "googleMapsUri": "https://maps.google.com/?cid=1341682425421728691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "20hundra5",
+  "karro": null,
+  "listRating": null,
+  "name": "20hundra5",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "800-grader": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000052,
+  "google": 4.7,
+  "googleAddress": "Kocksgatan 3, 116 24 Stockholm, Sverige",
+  "googleCount": 1277,
+  "googleMapsUri": "https://maps.google.com/?cid=5788307255568818342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "800 Grader Slice Shop",
+  "karro": null,
+  "listRating": null,
+  "name": "800 Grader",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "a-bar-called-gemma": {
+  "area": "",
+  "businessStatus": "CLOSED_PERMANENTLY",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000128,
+  "google": 4.7,
+  "googleAddress": "Grev Turegatan 30, 114 38 Stockholm, Sverige",
+  "googleCount": 903,
+  "googleMapsUri": "https://maps.google.com/?cid=5258320995104800106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "A bar called Gemma",
+  "karro": null,
+  "listRating": null,
+  "name": "A Bar Called Gemma",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "a-la-lo": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000135,
+  "google": 4.3,
+  "googleAddress": "Birger Jarlsgatan 77, 113 56 Stockholm, Sverige",
+  "googleCount": 495,
+  "googleMapsUri": "https://maps.google.com/?cid=16758962981931734793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "À la Lo",
+  "karro": null,
+  "listRating": null,
+  "name": "A La Lo",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ag": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000047,
+  "google": 4.5,
+  "googleAddress": "Kronobergsgatan 37, 112 33 Stockholm, Sverige",
+  "googleCount": 4524,
+  "googleMapsUri": "https://maps.google.com/?cid=13150107388284474101&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "AG",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "AG",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "alba-vinbar": {
+  "area": "Nytorget",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000108,
+  "google": 4.1,
+  "googleAddress": "Skånegatan 88, 116 37 Stockholm, Sverige",
+  "googleCount": 119,
+  "googleMapsUri": "https://maps.google.com/?cid=13012355058712637661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Alba vinbar nytorget",
+  "karro": null,
+  "listRating": null,
+  "name": "Alba Vinbar",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "alskade-traditioner": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000133,
+  "google": 4.5,
+  "googleAddress": "Södermannagatan 42, 116 40 Stockholm, Sverige",
+  "googleCount": 1822,
+  "googleMapsUri": "https://maps.google.com/?cid=2201542298593468331&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Älskade traditioner",
+  "karro": null,
+  "listRating": null,
+  "name": "Älskade Traditioner",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "apo": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian",
+   "cocktails"
+  ],
+  "createdAt": 1700000000034,
+  "google": 4.4,
+  "googleAddress": "Regeringsgatan 66, 111 39 Stockholm, Sverige",
+  "googleCount": 1783,
+  "googleMapsUri": "https://maps.google.com/?cid=18427228572707729744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Asian Post Office",
+  "karro": null,
+  "listRating": null,
+  "name": "APO",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "apropos": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000125,
+  "google": 4.7,
+  "googleAddress": "Sankt Eriksplan 5, 113 20 Stockholm, Sverige",
+  "googleCount": 483,
+  "googleMapsUri": "https://maps.google.com/?cid=17016518256943398180&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "apropos",
+  "karro": null,
+  "listRating": null,
+  "name": "Apropos",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "art": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000028,
+  "google": 4.4,
+  "googleAddress": "Norra Stationsgatan 65, 113 43 Stockholm, Sverige",
+  "googleCount": 749,
+  "googleMapsUri": "https://maps.google.com/?cid=2870252151160146538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang ART",
+  "karro": null,
+  "listRating": null,
+  "name": "ART",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "artilleriet": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000075,
+  "google": 4.4,
+  "googleAddress": "Artillerigatan 13, 114 51 Stockholm, Sverige",
+  "googleCount": 1068,
+  "googleMapsUri": "https://maps.google.com/?cid=34558755632438004&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Artilleriet",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Artilleriet",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "astoria": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000064,
+  "google": 4.4,
+  "googleAddress": "Nybrogatan 15, 114 39 Stockholm, Sverige",
+  "googleCount": 1675,
+  "googleMapsUri": "https://maps.google.com/?cid=11833764306716826368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Brasserie Astoria",
+  "karro": null,
+  "listRating": null,
+  "name": "Astoria",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "at-six": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000122,
+  "google": 3.9,
+  "googleAddress": "Brunkebergstorg 6, 111 51 Stockholm, Sverige",
+  "googleCount": 29,
+  "googleMapsUri": "https://maps.google.com/?cid=9000525575702254164&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "At Six Cocktail Bar",
+  "karro": null,
+  "listRating": null,
+  "name": "At Six",
+  "note": "Cocktailbaren",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "aubergine": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000094,
+  "google": 4.4,
+  "googleAddress": "Linnégatan 38, 114 47 Stockholm, Sverige",
+  "googleCount": 889,
+  "googleMapsUri": "https://maps.google.com/?cid=17276594646953235943&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurant Aubergine",
+  "karro": null,
+  "listRating": null,
+  "name": "Aubergine",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "b-a-r": {
+  "area": "Blasieholmsgatan 4A",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "seafood"
+  ],
+  "createdAt": 1700000000059,
+  "google": 4.3,
+  "googleAddress": "Blasieholmsgatan 4A, 111 48 Stockholm, Sverige",
+  "googleCount": 1411,
+  "googleMapsUri": "https://maps.google.com/?cid=10556771223644269840&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang B.A.R.",
+  "karro": null,
+  "listRating": null,
+  "name": "B.A.R",
+  "note": "Kräftor, fisk",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "babette": {
+  "area": "Vasastan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000077,
+  "google": 4.3,
+  "googleAddress": "Roslagsgatan 6, 113 55 Stockholm, Sverige",
+  "googleCount": 718,
+  "googleMapsUri": "https://maps.google.com/?cid=9046819349992790172&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Babette",
+  "karro": null,
+  "listRating": null,
+  "name": "Babette",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bageriet-bulleboden": {
+  "area": "Parmmätargatan 7",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "med"
+  ],
+  "createdAt": 1700000000102,
+  "google": 4.6,
+  "googleAddress": "Parmmätargatan 7, 112 24 Stockholm, Sverige",
+  "googleCount": 284,
+  "googleMapsUri": "https://maps.google.com/?cid=8335746057114034951&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bageriet Bulleboden",
+  "karro": null,
+  "listRating": null,
+  "name": "Bageriet Bulleboden",
+  "note": "Pita gyros",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "balzac": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000086,
+  "google": 4.2,
+  "googleAddress": "Odengatan 26, 113 51 Stockholm, Sverige",
+  "googleCount": 2162,
+  "googleMapsUri": "https://maps.google.com/?cid=1401021614722504073&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Brasserie Balzac",
+  "karro": null,
+  "listRating": null,
+  "name": "Balzac",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bar-abrovinsch": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000109,
+  "google": 4.7,
+  "googleAddress": "Inedalsgatan 15, 112 32 Stockholm, Sverige",
+  "googleCount": 184,
+  "googleMapsUri": "https://maps.google.com/?cid=5392053434250392641&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bar Abrovinsch",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Bar Abrovinsch",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "bar-ingrid": {
+  "area": "Olof Palmes gata",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000115,
+  "google": 4.7,
+  "googleAddress": "Olof Palmes gata 12, 111 37 Stockholm, Sverige",
+  "googleCount": 178,
+  "googleMapsUri": "https://maps.google.com/?cid=2434758097798357209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bar Ingrid",
+  "karro": null,
+  "listRating": null,
+  "name": "Bar Ingrid",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bar-nimes": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000110,
+  "google": 4.3,
+  "googleAddress": "Rådmansgatan 25, 114 25 Stockholm, Sverige",
+  "googleCount": 163,
+  "googleMapsUri": "https://maps.google.com/?cid=4559012014858279430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bar Nîmes",
+  "karro": null,
+  "listRating": null,
+  "name": "Bar Nimes",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bar-nombre": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "latin"
+  ],
+  "createdAt": 1700000000107,
+  "google": 4.6,
+  "googleAddress": "Odengatan 36, 113 51 Stockholm, Sverige",
+  "googleCount": 1150,
+  "googleMapsUri": "https://maps.google.com/?cid=560800332548561415&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bar Nombre",
+  "karro": null,
+  "listRating": null,
+  "name": "Bar Nombre",
+  "note": "Basilikasorbet",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bara-caisas": {
+  "area": "Odengatan",
+  "businessStatus": "CLOSED_TEMPORARILY",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000113,
+  "google": 4.9,
+  "googleAddress": "Odengatan 80, 113 22 Stockholm, Sverige",
+  "googleCount": 41,
+  "googleMapsUri": "https://maps.google.com/?cid=7830779474728669568&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bara Caisas",
+  "karro": null,
+  "listRating": null,
+  "name": "Bara Caisas",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "barrels": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "burger"
+  ],
+  "createdAt": 1700000000023,
+  "google": 4.3,
+  "googleAddress": "Smålandsgatan 22, 111 46 Stockholm, Sverige",
+  "googleCount": 2911,
+  "googleMapsUri": "https://maps.google.com/?cid=2536639560712075899&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Barrels Burger & Beer (City)",
+  "karro": null,
+  "listRating": null,
+  "name": "Barrels",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bastardo": {
+  "area": "Surbrunnsgatan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000021,
+  "google": 4.7,
+  "googleAddress": "Surbrunnsgatan 20, 113 48 Stockholm, Sverige",
+  "googleCount": 171,
+  "googleMapsUri": "https://maps.google.com/?cid=16002686351148691060&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bastardo",
+  "karro": null,
+  "listRating": null,
+  "name": "Bastardo",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "belgobaren": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "seafood"
+  ],
+  "createdAt": 1700000000062,
+  "google": 4.1,
+  "googleAddress": "Bryggargatan 12, 111 21 Stockholm, Sverige",
+  "googleCount": 3412,
+  "googleMapsUri": "https://maps.google.com/?cid=1331424280493159599&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Belgobaren",
+  "karro": null,
+  "listRating": null,
+  "name": "Belgobaren",
+  "note": "Musslor och belgisk bärs",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bibon": {
+  "area": "Biblioteksgatan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000095,
+  "google": 4.5,
+  "googleAddress": "Biblioteksgatan 6, 111 46 Stockholm, Sverige",
+  "googleCount": 117,
+  "googleMapsUri": "https://maps.google.com/?cid=16472219407884937804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bibon",
+  "karro": null,
+  "listRating": null,
+  "name": "Bibon",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "birkastans": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000057,
+  "google": 4.1,
+  "googleAddress": "Vikingagatan 16, 113 42 Stockholm, Sverige",
+  "googleCount": 986,
+  "googleMapsUri": "https://maps.google.com/?cid=15773747464507648479&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Birkastans Pizzeria",
+  "karro": null,
+  "listRating": null,
+  "name": "Birkastans",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bistro-vincent": {
+  "area": "Söder",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish",
+   "aw"
+  ],
+  "createdAt": 1700000000098,
+  "google": 4.6,
+  "googleAddress": "Östgötagatan 85, 116 64 Stockholm, Sverige",
+  "googleCount": 99,
+  "googleMapsUri": "https://maps.google.com/?cid=11891439864286073137&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Vincent Vin & Bar",
+  "karro": null,
+  "listRating": null,
+  "name": "Bistro Vincent",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "bla-porten": {
+  "area": "Djurgården",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000083,
+  "google": 4.3,
+  "googleAddress": "Djurgårdsvägen 64, 115 21 Stockholm, Sverige",
+  "googleCount": 1142,
+  "googleMapsUri": "https://maps.google.com/?cid=860219349435670420&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Blå Porten - Restaurang & Café",
+  "karro": null,
+  "listRating": null,
+  "name": "Blå Porten",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "black-milk-gastro": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000092,
+  "google": 4.3,
+  "googleAddress": "Engelbrektsgatan 3, 114 32 Stockholm, Sverige",
+  "googleCount": 137,
+  "googleMapsUri": "https://maps.google.com/?cid=8253580592587144503&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Black Milk Gastro Bar",
+  "karro": null,
+  "listRating": null,
+  "name": "Black Milk Gastro",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "brasserie-astrid": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000065,
+  "google": 4,
+  "googleAddress": "Mälartrappan 5, 116 45 Stockholm, Sverige",
+  "googleCount": 257,
+  "googleMapsUri": "https://maps.google.com/?cid=17351219182149906297&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Brasserie Astrid",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Brasserie Astrid",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "brasserie-godot": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000078,
+  "google": 4.6,
+  "googleAddress": "Grev Turegatan 36, 114 38 Stockholm, Sverige",
+  "googleCount": 667,
+  "googleMapsUri": "https://maps.google.com/?cid=12715071783362536120&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Brasserie Godot",
+  "karro": null,
+  "listRating": null,
+  "name": "Brasserie Godot",
+  "note": "\"Allt va dunder\" sa Emelie",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "brunchoteket": {
+  "area": "Linnégatan",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000138,
+  "google": null,
+  "karro": null,
+  "listRating": null,
+  "name": "Brunchoteket",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "byblos": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "med"
+  ],
+  "createdAt": 1700000000101,
+  "google": 4.6,
+  "googleAddress": "Döbelnsgatan 79, 113 52 Stockholm, Sverige",
+  "googleCount": 315,
+  "googleMapsUri": "https://maps.google.com/?cid=17954475681776328223&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Byblos Lebanese Cuisine",
+  "karro": null,
+  "listRating": null,
+  "name": "Byblos",
+  "note": "Libanesiskt",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "cafe-saturnus": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000144,
+  "google": 4.1,
+  "googleAddress": "Eriksbergsgatan 6, 114 30 Stockholm, Sverige",
+  "googleCount": 1218,
+  "googleMapsUri": "https://maps.google.com/?cid=8248971695728526087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Café Saturnus",
+  "karro": null,
+  "listRating": null,
+  "name": "Café Saturnus",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "caffeine-cravings": {
+  "area": "Söder",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000143,
+  "google": 4.5,
+  "googleAddress": "Borgmästargatan 4A, 116 29 Stockholm, Sverige",
+  "googleCount": 221,
+  "googleMapsUri": "https://maps.google.com/?cid=8356611436655493253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Caffeine and Cravings",
+  "karro": null,
+  "listRating": null,
+  "name": "Caffeine & Cravings",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "calle-p": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza",
+   "cocktails"
+  ],
+  "createdAt": 1700000000058,
+  "google": 4.1,
+  "googleAddress": "Berzelii park 10, 111 47 Stockholm, Sverige",
+  "googleCount": 677,
+  "googleMapsUri": "https://maps.google.com/?cid=7861815143227742336&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Calle P",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Calle P",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "capri-due": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000005,
+  "google": 4.6,
+  "googleAddress": "Tomtebogatan 27, 113 38 Stockholm, Sverige",
+  "googleCount": 752,
+  "googleMapsUri": "https://maps.google.com/?cid=4374788074568853241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Capridue's Bakficka",
+  "karro": null,
+  "listRating": null,
+  "name": "Capri Due",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ciccio-s": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000008,
+  "google": 4,
+  "googleAddress": "Nybrogatan 21, 114 39 Stockholm, Sverige",
+  "googleCount": 319,
+  "googleMapsUri": "https://maps.google.com/?cid=10094351685650921456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Ciccio's",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Ciccio's",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "coquetel-social": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000123,
+  "google": 4,
+  "googleAddress": "Birger Jarlsgatan 20, 114 34 Stockholm, Sverige",
+  "googleCount": 242,
+  "googleMapsUri": "https://maps.google.com/?cid=1771504820539689765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Coquetel Social",
+  "karro": "🔥",
+  "listRating": null,
+  "name": "Coquetel Social",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "cork-vinbar": {
+  "area": "Gamla stan",
+  "businessStatus": "CLOSED_TEMPORARILY",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000112,
+  "google": 4.9,
+  "googleAddress": "Stora Nygatan 22, 111 27 Stockholm, Sverige",
+  "googleCount": 422,
+  "googleMapsUri": "https://maps.google.com/?cid=3273163649290734946&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Cork Vinbar",
+  "karro": null,
+  "listRating": null,
+  "name": "Cork Vinbar",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "coup-d-etat": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000097,
+  "google": 4.7,
+  "googleAddress": "Engelbrektsgatan 37, 114 32 Stockholm, Sverige",
+  "googleCount": 1357,
+  "googleMapsUri": "https://maps.google.com/?cid=14037539469970534755&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "COUP D'ETAT",
+  "karro": null,
+  "listRating": null,
+  "name": "Coup d'État",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "crazy-chicken": {
+  "area": "",
+  "cats": [
+   "burger"
+  ],
+  "createdAt": 1700000000025,
+  "google": null,
+  "karro": null,
+  "listRating": null,
+  "name": "Crazy Chicken",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "cucina-povera": {
+  "area": "Odengatan 62",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000016,
+  "google": 4.1,
+  "googleAddress": "Odengatan 62, 113 22 Stockholm, Sverige",
+  "googleCount": 415,
+  "googleMapsUri": "https://maps.google.com/?cid=11863797060357510660&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Cucina Povera",
+  "karro": null,
+  "listRating": null,
+  "name": "Cucina Povera",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "cypern": {
+  "area": "Valhallavägen 50",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "med"
+  ],
+  "createdAt": 1700000000099,
+  "google": 4.5,
+  "googleAddress": "Valhallavägen 50, 114 27 Stockholm, Sverige",
+  "googleCount": 1412,
+  "googleMapsUri": "https://maps.google.com/?cid=15266271994730242484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Cypern",
+  "karro": null,
+  "listRating": null,
+  "name": "Cypern",
+  "note": "Grekiskt",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "dailys-bistro": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000139,
+  "google": 4.5,
+  "googleAddress": "Sankt Eriksgatan 80, 113 62 Stockholm, Sverige",
+  "googleCount": 311,
+  "googleMapsUri": "https://maps.google.com/?cid=14063478920958141327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Daily’s Bistro",
+  "karro": null,
+  "listRating": null,
+  "name": "Dailys Bistro",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "deglabbet": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000053,
+  "google": 4.7,
+  "googleAddress": "Upplandsgatan 9B, 111 23 Stockholm, Sverige",
+  "googleCount": 703,
+  "googleMapsUri": "https://maps.google.com/?cid=11759616892987908129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Deglabbet Vasastan",
+  "karro": null,
+  "listRating": null,
+  "name": "Deglabbet",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "den-gamle-och-havet": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000003,
+  "google": 4.3,
+  "googleAddress": "Tulegatan 27, 113 53 Stockholm, Sverige",
+  "googleCount": 733,
+  "googleMapsUri": "https://maps.google.com/?cid=5624167780624356495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Den Gamle Och Havet",
+  "karro": null,
+  "listRating": null,
+  "name": "Den Gamle och Havet",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "dersch": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000087,
+  "google": 4.2,
+  "googleAddress": "Tulegatan 22, 113 53 Stockholm, Sverige",
+  "googleCount": 571,
+  "googleMapsUri": "https://maps.google.com/?cid=13244070984830221958&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Dersch",
+  "karro": null,
+  "listRating": null,
+  "name": "Dersch",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "din-din-club": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000042,
+  "google": 4.5,
+  "googleAddress": "Drottninggatan 94, 111 36 Stockholm, Sverige",
+  "googleCount": 309,
+  "googleMapsUri": "https://maps.google.com/?cid=4537181819483936786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "DIN-DIN Club Drottninggatan",
+  "karro": null,
+  "listRating": null,
+  "name": "Din Din Club",
+  "note": "Tryffelsushi",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "eataly": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian",
+   "brunch"
+  ],
+  "createdAt": 1700000000022,
+  "google": 3.8,
+  "googleAddress": "Biblioteksgatan 5, 111 46 Stockholm, Sverige",
+  "googleCount": 1849,
+  "googleMapsUri": "https://maps.google.com/?cid=17857508213739706497&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Eataly Stockholm",
+  "karro": null,
+  "listRating": null,
+  "name": "Eataly",
+  "note": "Italiensk mathall",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "emberlin": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000096,
+  "google": 3.9,
+  "googleAddress": "Stureplan 8, 114 35 Stockholm, Sverige",
+  "googleCount": 10,
+  "googleMapsUri": "https://maps.google.com/?cid=1468317737119179484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Emberlin Stockholm",
+  "karro": null,
+  "listRating": null,
+  "name": "Emberlin",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "esa-sushi": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000039,
+  "google": 4.2,
+  "googleAddress": "Torsgatan 45, 113 37 Stockholm, Sverige",
+  "googleCount": 1865,
+  "googleMapsUri": "https://maps.google.com/?cid=5533538836286882669&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "ESA Sushi",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Esa Sushi",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "esperanza": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "latin"
+  ],
+  "createdAt": 1700000000106,
+  "google": 4.5,
+  "googleAddress": "Odengatan 68, 113 22 Stockholm, Sverige",
+  "googleCount": 969,
+  "googleMapsUri": "https://maps.google.com/?cid=6213379363263184448&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Esperanza",
+  "karro": null,
+  "listRating": null,
+  "name": "Esperanza",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "esperia": {
+  "area": "Söder",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "med"
+  ],
+  "createdAt": 1700000000100,
+  "google": 4.5,
+  "googleAddress": "Sankt Paulsgatan 17, 118 46 Stockholm, Sverige",
+  "googleCount": 1846,
+  "googleMapsUri": "https://maps.google.com/?cid=8234984812707133163&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Esperia Södermalm",
+  "karro": null,
+  "listRating": null,
+  "name": "Esperia",
+  "note": "Grekiskt",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "fabrique": {
+  "area": "Djurgården",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "fika"
+  ],
+  "createdAt": 1700000000147,
+  "google": 4.7,
+  "googleAddress": "Beckholmsvägen 26, 115 21 Stockholm, Sverige",
+  "googleCount": 243,
+  "googleMapsUri": "https://maps.google.com/?cid=6035230230525064576&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Fabrique",
+  "karro": null,
+  "listRating": null,
+  "name": "Fabrique",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "farang": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000035,
+  "google": 4.5,
+  "googleAddress": "Tulegatan 7, 113 53 Stockholm, Sverige",
+  "googleCount": 2243,
+  "googleMapsUri": "https://maps.google.com/?cid=13565771102859876424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Farang",
+  "karro": null,
+  "listRating": null,
+  "name": "Farang",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "flippin-burgers": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "burger"
+  ],
+  "createdAt": 1700000000024,
+  "google": 4.1,
+  "googleAddress": "Norrlandsgatan 16, 111 43 Stockholm, Sverige",
+  "googleCount": 956,
+  "googleMapsUri": "https://maps.google.com/?cid=5427528753989786668&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Flippin' Burgers",
+  "karro": null,
+  "listRating": null,
+  "name": "Flippin' Burgers",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "forma": {
+  "area": "Hornstull",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000090,
+  "google": 4.3,
+  "googleAddress": "Hornsbruksgatan 28, 117 34 Stockholm, Sverige",
+  "googleCount": 430,
+  "googleMapsUri": "https://maps.google.com/?cid=8960933564552810826&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Forma",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Forma",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "frippe": {
+  "area": "Nybrogatan 6",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000085,
+  "google": 4.3,
+  "googleAddress": "Nybrogatan 6, 114 34 Stockholm, Sverige",
+  "googleCount": 425,
+  "googleMapsUri": "https://maps.google.com/?cid=6163249455109714555&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Frippe",
+  "karro": null,
+  "listRating": null,
+  "name": "Frippe",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "gazza": {
+  "area": "Mariatorget",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000014,
+  "google": 4.1,
+  "googleAddress": "Hornsgatan 66, 118 21 Stockholm, Sverige",
+  "googleCount": 304,
+  "googleMapsUri": "https://maps.google.com/?cid=7448305032299163752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "GAZZA",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Gazza",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "gioia": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000009,
+  "google": 4.3,
+  "googleAddress": "Gamla Brogatan 36, 111 20 Stockholm, Sverige",
+  "googleCount": 504,
+  "googleMapsUri": "https://maps.google.com/?cid=3586608789152978628&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Gioia",
+  "karro": null,
+  "listRating": null,
+  "name": "Gioia",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "glashuset": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000072,
+  "google": 4.4,
+  "googleAddress": "Strandvägen 18, 114 56 Stockholm, Sverige",
+  "googleCount": 2577,
+  "googleMapsUri": "https://maps.google.com/?cid=3145348469651855492&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Glashuset Restaurang & Bar",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Glashuset",
+  "note": "Råbiffen, cavasangria 🤌🏼",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "greasy-spoon": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000132,
+  "google": 4,
+  "googleAddress": "@ Playhouse Teater, Drottninggatan 71A, 111 36 Stockholm, Sverige",
+  "googleCount": 469,
+  "googleMapsUri": "https://maps.google.com/?cid=7025304160677839782&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Greasy Spoon",
+  "karro": null,
+  "listRating": null,
+  "name": "Greasy Spoon",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "gretas": {
+  "area": "Hötorget/Haymarket",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000141,
+  "google": 4,
+  "googleAddress": "Hötorget 13-15, 111 57 Stockholm, Sverige",
+  "googleCount": 591,
+  "googleMapsUri": "https://maps.google.com/?cid=2811533830758637311&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Gretas",
+  "karro": null,
+  "listRating": null,
+  "name": "Gretas",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "grill": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000048,
+  "google": 4.2,
+  "googleAddress": "Drottninggatan 89, 113 60 Stockholm, Sverige",
+  "googleCount": 2537,
+  "googleMapsUri": "https://maps.google.com/?cid=16909191320052502908&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Grill",
+  "karro": null,
+  "listRating": null,
+  "name": "Grill",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "grus-grus": {
+  "area": "Vasastan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000118,
+  "google": 4,
+  "googleAddress": "Karlbergsvägen 14, 113 27 Stockholm, Sverige",
+  "googleCount": 355,
+  "googleMapsUri": "https://maps.google.com/?cid=12129650059483522793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Grus Grus",
+  "karro": null,
+  "listRating": null,
+  "name": "Grus Grus",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "hallwyska": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000129,
+  "google": 3.4,
+  "googleAddress": "Hamngatan 4, 111 47 Stockholm, Sverige",
+  "googleCount": 196,
+  "googleMapsUri": "https://maps.google.com/?cid=3452879073892222897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Hallwylska Restaurang",
+  "karro": null,
+  "listRating": null,
+  "name": "Hallwyska",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "hantverket": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish",
+   "cocktails"
+  ],
+  "createdAt": 1700000000076,
+  "google": 4.6,
+  "googleAddress": "Sturegatan 15a, 114 36 Stockholm, Sverige",
+  "googleCount": 2449,
+  "googleMapsUri": "https://maps.google.com/?cid=209158239566498338&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Hantverket",
+  "karro": null,
+  "listRating": null,
+  "name": "Hantverket",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "hasselssons": {
+  "area": "Precis över bron, S:t Eriksplan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "seafood"
+  ],
+  "createdAt": 1700000000063,
+  "google": 4.6,
+  "googleAddress": "Sankt Eriksgatan 67, 113 32 Stockholm, Sverige",
+  "googleCount": 512,
+  "googleMapsUri": "https://maps.google.com/?cid=3576930772098869205&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Hasselsson Stockholm",
+  "karro": null,
+  "listRating": null,
+  "name": "Hasselssons",
+  "note": "Fish & chips",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "hattori": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000041,
+  "google": 4.6,
+  "googleAddress": "Drottninggatan 85, 111 61 Stockholm, Sverige",
+  "googleCount": 1205,
+  "googleMapsUri": "https://maps.google.com/?cid=14854309969883633460&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Hattori Sushi Devil",
+  "karro": null,
+  "listRating": null,
+  "name": "Hattori",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "himlen": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000127,
+  "google": 4,
+  "googleAddress": "Götgatan 78, 118 30 Stockholm, Sverige",
+  "googleCount": 2426,
+  "googleMapsUri": "https://maps.google.com/?cid=8698206436002980624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Himlen",
+  "karro": null,
+  "listRating": null,
+  "name": "Himlen",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ino-izakaya": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000038,
+  "google": 4.2,
+  "googleAddress": "Norra Stationsgatan 85, 113 65 Stockholm, Sverige",
+  "googleCount": 312,
+  "googleMapsUri": "https://maps.google.com/?cid=4020350224807115464&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Ino Izakaya",
+  "karro": null,
+  "listRating": null,
+  "name": "Ino Izakaya",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "italiano": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000017,
+  "google": 4,
+  "googleAddress": "Nybrogatan 12, 114 39 Stockholm, Sverige",
+  "googleCount": 551,
+  "googleMapsUri": "https://maps.google.com/?cid=9308541436250229691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Italiano",
+  "karro": null,
+  "listRating": null,
+  "name": "Italiano",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "kasai": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000030,
+  "google": 3.8,
+  "googleAddress": "Linnégatan 18, 114 47 Stockholm, Sverige",
+  "googleCount": 1242,
+  "googleMapsUri": "https://maps.google.com/?cid=3555443109512410238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Kasai • Stockholm",
+  "karro": null,
+  "listRating": null,
+  "name": "Kasai",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "kavalleriet": {
+  "area": "",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000069,
+  "google": null,
+  "karro": null,
+  "listRating": null,
+  "name": "Kavalleriet",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "kura": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000130,
+  "google": 4.2,
+  "googleAddress": "Jakobsbergsgatan 15, 111 44 Stockholm, Sverige",
+  "googleCount": 207,
+  "googleMapsUri": "https://maps.google.com/?cid=15433832041081722227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Kura Stockholm",
+  "karro": "🥴",
+  "listRating": null,
+  "name": "Kura",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "la-perla": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000010,
+  "google": 4.3,
+  "googleAddress": "Södermalmsallén 36, 118 28 Stockholm, Sverige",
+  "googleCount": 2258,
+  "googleMapsUri": "https://maps.google.com/?cid=3300032912346512947&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "La Perla by Ingrosso",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "La Perla",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "la-vecchia-signora": {
+  "area": "",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000002,
+  "google": null,
+  "karro": null,
+  "listRating": null,
+  "name": "La Vecchia Signora",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "la-vventura": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000000,
+  "google": 4.3,
+  "googleAddress": "Sveavägen 77, 113 50 Stockholm, Sverige",
+  "googleCount": 1536,
+  "googleMapsUri": "https://maps.google.com/?cid=6793727839942602865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "L'Avventura",
+  "karro": null,
+  "listRating": null,
+  "name": "La'vventura",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ladan": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000117,
+  "google": 4.2,
+  "googleAddress": "Luntmakargatan 63, 113 58 Stockholm, Sverige",
+  "googleCount": 1786,
+  "googleMapsUri": "https://maps.google.com/?cid=2632038894878921656&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Lådan",
+  "karro": null,
+  "listRating": null,
+  "name": "Lådan",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "las-brasas": {
+  "area": "Roslagsgatan 6",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "latin"
+  ],
+  "createdAt": 1700000000104,
+  "google": 4.6,
+  "googleAddress": "Roslagsgatan 6, 113 55 Stockholm, Sverige",
+  "googleCount": 525,
+  "googleMapsUri": "https://maps.google.com/?cid=10281043532778877069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Las Brasas",
+  "karro": null,
+  "listRating": null,
+  "name": "Las Brasas",
+  "note": "Ebba gillade",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "le-jungfrugatan": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000137,
+  "google": 4,
+  "googleAddress": "Jungfrugatan 7A, 114 44 Stockholm, Sverige",
+  "googleCount": 226,
+  "googleMapsUri": "https://maps.google.com/?cid=5176356945236752518&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "LE ÖSTERMALM",
+  "karro": null,
+  "listRating": null,
+  "name": "Le Jungfrugatan",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "leche-negra": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "latin"
+  ],
+  "createdAt": 1700000000105,
+  "google": 4.3,
+  "googleAddress": "Birger Jarlsgatan 32A, 114 29 Stockholm, Sverige",
+  "googleCount": 64,
+  "googleMapsUri": "https://maps.google.com/?cid=7070971891849232489&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Leche Negra",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Leche Negra",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "lejontornet": {
+  "area": "Gamla stan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000079,
+  "google": 4.5,
+  "googleAddress": "Yxsmedsgränd 12, 111 27 Stockholm, Sverige",
+  "googleCount": 153,
+  "googleMapsUri": "https://maps.google.com/?cid=7430743948668957527&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Leijontornet",
+  "karro": null,
+  "listRating": null,
+  "name": "Lejontornet",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "lennart-bror-fisk": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "seafood"
+  ],
+  "createdAt": 1700000000060,
+  "google": 4.3,
+  "googleAddress": "Tegnérgatan 9, 111 40 Stockholm, Sverige",
+  "googleCount": 440,
+  "googleMapsUri": "https://maps.google.com/?cid=680717693404368634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Lennart & Bror Fisk",
+  "karro": null,
+  "listRating": null,
+  "name": "Lennart & Bror Fisk",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "lennart-bror-kott": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000050,
+  "google": 4.4,
+  "googleAddress": "Birger Jarlsgatan 83, 113 56 Stockholm, Sverige",
+  "googleCount": 460,
+  "googleMapsUri": "https://maps.google.com/?cid=7682483112671676451&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Lennart & Bror",
+  "karro": null,
+  "listRating": null,
+  "name": "Lennart & Bror Kött",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "leoparden": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000116,
+  "google": 3.9,
+  "googleAddress": "Tegnérgatan 16, 113 58 Stockholm, Sverige",
+  "googleCount": 241,
+  "googleMapsUri": "https://maps.google.com/?cid=11154975554098659114&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Bistro Leoparden",
+  "karro": null,
+  "listRating": null,
+  "name": "Leoparden",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "levinskys": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "burger"
+  ],
+  "createdAt": 1700000000027,
+  "google": 4,
+  "googleAddress": "Rörstrandsgatan 9, 113 40 Stockholm, Sverige",
+  "googleCount": 908,
+  "googleMapsUri": "https://maps.google.com/?cid=11326282237366851859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Levinskys Burger",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Levinskys",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "lilla-ego": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000093,
+  "google": 4.7,
+  "googleAddress": "Västmannagatan 69, 113 26 Stockholm, Sverige",
+  "googleCount": 1226,
+  "googleMapsUri": "https://maps.google.com/?cid=10749755146363439015&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Lilla Ego",
+  "karro": null,
+  "listRating": null,
+  "name": "Lilla Ego",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "lucy-s-flower-shop": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000126,
+  "google": 4.6,
+  "googleAddress": "Birger Jarlsgatan 20, 114 34 Stockholm, Sverige",
+  "googleCount": 625,
+  "googleMapsUri": "https://maps.google.com/?cid=15507100129372111296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Lucy's Flower Shop",
+  "karro": null,
+  "listRating": null,
+  "name": "Lucy's Flower Shop",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "macelleria": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000007,
+  "google": 4.2,
+  "googleAddress": "Solnavägen 1b, 113 65 Stockholm, Sverige",
+  "googleCount": 896,
+  "googleMapsUri": "https://maps.google.com/?cid=13188645585688748743&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Macelleria",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Macelleria",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "mahalo": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000142,
+  "google": 4.5,
+  "googleAddress": "Hantverkargatan 34, 112 21 Stockholm, Sverige",
+  "googleCount": 141,
+  "googleMapsUri": "https://maps.google.com/?cid=3463895858307885705&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Mahalo Kungsholmen",
+  "karro": null,
+  "listRating": null,
+  "name": "Mahalo",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "marcos": {
+  "area": "Vasastan",
+  "businessStatus": "CLOSED_PERMANENTLY",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000020,
+  "google": 4.3,
+  "googleAddress": "Torbjörn Klockares gata 1, 113 30 Stockholm, Sverige",
+  "googleCount": 343,
+  "googleMapsUri": "https://maps.google.com/?cid=7257015927913735558&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Marco's",
+  "karro": null,
+  "listRating": null,
+  "name": "Marcos",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "masen": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000081,
+  "google": 3.8,
+  "googleAddress": "Torkel Knutssonsgatan 2, 118 25 Stockholm, Sverige",
+  "googleCount": 151,
+  "googleMapsUri": "https://maps.google.com/?cid=1239109444378546373&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Måsen",
+  "karro": "😮‍💨",
+  "listRating": null,
+  "name": "Måsen",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "master-anders": {
+  "area": "Pipersgatan 1",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000080,
+  "google": 4.2,
+  "googleAddress": "Pipersgatan 1, 112 24 Stockholm, Sverige",
+  "googleCount": 644,
+  "googleMapsUri": "https://maps.google.com/?cid=15412611488759194245&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Mäster Anders",
+  "karro": null,
+  "listRating": null,
+  "name": "Mäster Anders",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "meno-male": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000054,
+  "google": 4.5,
+  "googleAddress": "Roslagsgatan 15, 113 55 Stockholm, Sverige",
+  "googleCount": 2229,
+  "googleMapsUri": "https://maps.google.com/?cid=14576078604644293991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Meno Male Vasastan",
+  "karro": null,
+  "listRating": null,
+  "name": "Meno Male",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "milles": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000071,
+  "google": 3.8,
+  "googleAddress": "Strandvägen 1, 114 51 Stockholm, Sverige",
+  "googleCount": 317,
+  "googleMapsUri": "https://maps.google.com/?cid=1949406068664474563&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Milles",
+  "karro": null,
+  "listRating": null,
+  "name": "Milles",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "misshumasshu": {
+  "area": "Smålandsgatan 10",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000044,
+  "google": 4.3,
+  "googleAddress": "Smålandsgatan 10, 111 46 Stockholm, Sverige",
+  "googleCount": 833,
+  "googleMapsUri": "https://maps.google.com/?cid=8332346380400496633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Misshumasshu",
+  "karro": null,
+  "listRating": null,
+  "name": "Misshumasshu",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "miyakodori": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000043,
+  "google": 4.6,
+  "googleAddress": "Upplandsgatan 7, 111 23 Stockholm, Sverige",
+  "googleCount": 768,
+  "googleMapsUri": "https://maps.google.com/?cid=5941218394092798545&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Miyakodori",
+  "karro": null,
+  "listRating": null,
+  "name": "Miyakodori",
+  "note": "Bästa Jonas ätit",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "mr-cake": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000131,
+  "google": 4.1,
+  "googleAddress": "Regeringsgatan 57, 111 56 Stockholm, Sverige",
+  "googleCount": 390,
+  "googleMapsUri": "https://maps.google.com/?cid=9392865834706083735&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "MR CAKE",
+  "karro": null,
+  "listRating": null,
+  "name": "Mr Cake",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "nektar": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000120,
+  "google": 4.2,
+  "googleAddress": "Rörstrandsgatan 12, 113 40 Stockholm, Sverige",
+  "googleCount": 108,
+  "googleMapsUri": "https://maps.google.com/?cid=1071862213528835374&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Nektar mat & vin",
+  "karro": null,
+  "listRating": null,
+  "name": "Nektar",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "noema": {
+  "area": "Birger Jarlsgatan 64",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000046,
+  "google": 4.2,
+  "googleAddress": "Birger Jarlsgatan 64, 114 29 Stockholm, Sverige",
+  "googleCount": 320,
+  "googleMapsUri": "https://maps.google.com/?cid=17849039504136230502&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Noema",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Noema",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "noi-by-nobis": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000091,
+  "google": 4.3,
+  "googleAddress": "Norrmalmstorg 4, 111 46 Stockholm, Sverige",
+  "googleCount": 251,
+  "googleMapsUri": "https://maps.google.com/?cid=2399072387912162935&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "NOI Stockholm - By Nobis",
+  "karro": null,
+  "listRating": null,
+  "name": "NOI by Nobis",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "non-solo-bar": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000111,
+  "google": 3.7,
+  "googleAddress": "Rörstrandsgatan 4, 113 40 Stockholm, Sweden",
+  "googleCount": 531,
+  "googleMapsUri": "https://maps.google.com/?cid=1771139677651987726&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Non Solo Bar",
+  "karro": null,
+  "listRating": null,
+  "name": "Non Solo Bar",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "nosh-chow": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000029,
+  "google": 3.9,
+  "googleAddress": "Norrlandsgatan 24, 111 43 Stockholm, Sverige",
+  "googleCount": 750,
+  "googleMapsUri": "https://maps.google.com/?cid=2687806860974292940&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Townhouse Nosh and Chow",
+  "karro": null,
+  "listRating": null,
+  "name": "Nosh & Chow",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "nybrogatan-38": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000066,
+  "google": 4.3,
+  "googleAddress": "Nybrogatan 38, 114 40 Stockholm, Sverige",
+  "googleCount": 1473,
+  "googleMapsUri": "https://maps.google.com/?cid=7392183770479562043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Nybrogatan 38 kvarterskrog och barservering",
+  "karro": null,
+  "listRating": null,
+  "name": "Nybrogatan 38",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "nyko": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000067,
+  "google": 4,
+  "googleAddress": "Nybrogatan 61, Kommendörsgatan 17, 114 40 Stockholm, Sverige",
+  "googleCount": 575,
+  "googleMapsUri": "https://maps.google.com/?cid=3910843090605108116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Nyko Kitchen",
+  "karro": null,
+  "listRating": null,
+  "name": "Nyko",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "olli": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian",
+   "cocktails"
+  ],
+  "createdAt": 1700000000013,
+  "google": 4.4,
+  "googleAddress": "Jakobsbergsgatan 21, 111 44 Stockholm, Sverige",
+  "googleCount": 4756,
+  "googleMapsUri": "https://maps.google.com/?cid=16410730983414873871&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Olli Ristorante",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Olli",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "oummi": {
+  "area": "Gamla stan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "med"
+  ],
+  "createdAt": 1700000000103,
+  "google": 4.5,
+  "googleAddress": "Lilla Nygatan 11, 111 28 Stockholm, Sverige",
+  "googleCount": 1098,
+  "googleMapsUri": "https://maps.google.com/?cid=14427575113864391686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Oummi",
+  "karro": null,
+  "listRating": null,
+  "name": "Oummi",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "petite-france": {
+  "area": "Norr Mälarstrand",
+  "businessStatus": "CLOSED_TEMPORARILY",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000140,
+  "google": 4,
+  "googleAddress": "John Ericssonsgatan 6, 112 22 Stockholm, Sweden",
+  "googleCount": 1520,
+  "googleMapsUri": "https://maps.google.com/?cid=14572930399470281728&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Petite France",
+  "karro": null,
+  "listRating": null,
+  "name": "Petite France",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "pom-flora": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000136,
+  "google": 4.4,
+  "googleAddress": "Odengatan 39, 113 51 Stockholm, Sverige",
+  "googleCount": 1137,
+  "googleMapsUri": "https://maps.google.com/?cid=17721769941147788990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Café Pom & Flora - Vasastan",
+  "karro": null,
+  "listRating": null,
+  "name": "Pom & Flora",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "posto": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000015,
+  "google": 4,
+  "googleAddress": "Holländargatan 1, 111 36 Stockholm, Sverige",
+  "googleCount": 495,
+  "googleMapsUri": "https://maps.google.com/?cid=9835507287506868541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Posto",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Posto",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "prime": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "burger"
+  ],
+  "createdAt": 1700000000026,
+  "google": 4.3,
+  "googleAddress": "Olof Palmes gata 12, 111 37 Stockholm, Sverige",
+  "googleCount": 2870,
+  "googleMapsUri": "https://maps.google.com/?cid=12059990383296812576&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Prime Burgers & Smokehouse - Hötorget",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Prime",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "prinsen": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000074,
+  "google": 4.4,
+  "googleAddress": "Mäster Samuelsgatan 4, 111 44 Stockholm, Sverige",
+  "googleCount": 3137,
+  "googleMapsUri": "https://maps.google.com/?cid=13435509699186139216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Prinsen",
+  "karro": null,
+  "listRating": null,
+  "name": "Prinsen",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "raw-sushi": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000037,
+  "google": 4.2,
+  "googleAddress": "Rörstrandsgatan 9, 113 40 Stockholm, Sverige",
+  "googleCount": 793,
+  "googleMapsUri": "https://maps.google.com/?cid=6351702608845130997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Raw Sushi & Grill",
+  "karro": null,
+  "listRating": null,
+  "name": "Raw Sushi",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "restaurang-goteborg": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000068,
+  "google": 4,
+  "googleAddress": "Midskeppsgatan 31, 120 66 Stockholm, Sverige",
+  "googleCount": 1298,
+  "googleMapsUri": "https://maps.google.com/?cid=2066275603903137172&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Göteborg",
+  "karro": null,
+  "listRating": null,
+  "name": "Restaurang Göteborg",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "restaurang-parken": {
+  "area": "Birger Jarlsgatan 76",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000089,
+  "google": 4.7,
+  "googleAddress": "Birger Jarlsgatan 76, 114 20 Stockholm, Sverige",
+  "googleCount": 459,
+  "googleMapsUri": "https://maps.google.com/?cid=6872046757894070439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Parken",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Restaurang Parken",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "rivetta": {
+  "area": "",
+  "businessStatus": "CLOSED_TEMPORARILY",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000019,
+  "google": 4.3,
+  "googleAddress": "Roslagsgatan 4, 113 55 Stockholm, Sverige",
+  "googleCount": 241,
+  "googleMapsUri": "https://maps.google.com/?cid=4115500159797886361&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Rivetta",
+  "karro": null,
+  "listRating": null,
+  "name": "Rivetta",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "savant-bar": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw"
+  ],
+  "createdAt": 1700000000114,
+  "google": 4.6,
+  "googleAddress": "Tegnérgatan 4, 113 58 Stockholm, Sverige",
+  "googleCount": 415,
+  "googleMapsUri": "https://maps.google.com/?cid=4667109340764209915&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Savant Bar",
+  "karro": null,
+  "listRating": null,
+  "name": "Savant Bar",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "savoj": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000055,
+  "google": 4.5,
+  "googleAddress": "Magnus Ladulåsgatan 4, 118 66 Stockholm, Sverige",
+  "googleCount": 348,
+  "googleMapsUri": "https://maps.google.com/?cid=1695046559136509904&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Savoj Pizza Södermalm",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Savoj",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "scarpetta": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian",
+   "cocktails"
+  ],
+  "createdAt": 1700000000011,
+  "google": 4.4,
+  "googleAddress": "Drottninggatan 71b, 111 36 Stockholm, Sverige",
+  "googleCount": 4149,
+  "googleMapsUri": "https://maps.google.com/?cid=15427972896076697167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Scarpetta (by ingrosso)",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Scarpetta",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "snabba-katten": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "aw",
+   "cocktails"
+  ],
+  "createdAt": 1700000000119,
+  "google": 4,
+  "googleAddress": "Tegnérgatan 16, 113 58 Stockholm, Sverige",
+  "googleCount": 48,
+  "googleMapsUri": "https://maps.google.com/?cid=17076428986306181944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Snabba Katten",
+  "karro": null,
+  "listRating": null,
+  "name": "Snabba Katten",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "spago": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000004,
+  "google": 4.2,
+  "googleAddress": "Götgatan 24, 118 46 Stockholm, Sverige",
+  "googleCount": 1006,
+  "googleMapsUri": "https://maps.google.com/?cid=8044206083919388439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "SPAGO",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Spago",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "sparrow-bistro": {
+  "area": "Birger Jarlsgatan 26A",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000082,
+  "google": 4.2,
+  "googleAddress": "Birger Jarlsgatan 26A, 114 34 Stockholm, Sverige",
+  "googleCount": 102,
+  "googleMapsUri": "https://maps.google.com/?cid=4879561696721067422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "The Sparrow Bistro",
+  "karro": null,
+  "listRating": null,
+  "name": "Sparrow Bistro",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "sperling-co": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000051,
+  "google": 4.6,
+  "googleAddress": "Sturegatan 6, 114 35 Stockholm, Sverige",
+  "googleCount": 136,
+  "googleMapsUri": "https://maps.google.com/?cid=6407676799834110425&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Sperling & Co",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Sperling & Co",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "spesso": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000018,
+  "google": 4.1,
+  "googleAddress": "Malmskillnadsgatan 38B, 111 57 Stockholm, Sverige",
+  "googleCount": 627,
+  "googleMapsUri": "https://maps.google.com/?cid=4557907100257340227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Spesso",
+  "karro": null,
+  "listRating": null,
+  "name": "Spesso",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "spring-rolls": {
+  "area": "Hantverkargatan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000045,
+  "google": 4.6,
+  "googleAddress": "Hantverkargatan 84, 112 38 Stockholm, Sverige",
+  "googleCount": 549,
+  "googleMapsUri": "https://maps.google.com/?cid=11694688578244413997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Springrolls",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Spring Rolls",
+  "note": "Vietnamesiskt",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "sthlm-brunchclub": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000134,
+  "google": 4.3,
+  "googleAddress": "Dalagatan 24, 113 24 Stockholm, Sverige",
+  "googleCount": 2658,
+  "googleMapsUri": "https://maps.google.com/?cid=13404241441097367783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "STHLM Brunch Club",
+  "karro": null,
+  "listRating": null,
+  "name": "Sthlm Brunchclub",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "stockholm-1897": {
+  "area": "Djurgårdsbron",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "fika"
+  ],
+  "createdAt": 1700000000146,
+  "google": 4.2,
+  "googleAddress": "Galärvarvsvägen 2, 115 21 Stockholm, Sverige",
+  "googleCount": 117,
+  "googleMapsUri": "https://maps.google.com/?cid=11654369955183276425&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Stockholm 1897 by Monika",
+  "karro": null,
+  "listRating": null,
+  "name": "Stockholm 1897",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "strandvagen-1": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000070,
+  "google": 4.1,
+  "googleAddress": "Strandvägen 1, 114 51 Stockholm, Sverige",
+  "googleCount": 1485,
+  "googleMapsUri": "https://maps.google.com/?cid=2277029279197635870&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Strandvägen 1",
+  "karro": "🤌🏼",
+  "listRating": null,
+  "name": "Strandvägen 1",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "sukai": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000040,
+  "google": 4,
+  "googleAddress": "Grev Turegatan 10, 114 46 Stockholm, Sverige",
+  "googleCount": 293,
+  "googleMapsUri": "https://maps.google.com/?cid=1847593247705671359&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Sushi Sukai",
+  "karro": null,
+  "listRating": null,
+  "name": "Sukai",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "supper": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000036,
+  "google": 4.3,
+  "googleAddress": "Humlegårdsgatan 17, 114 46 Stockholm, Sverige",
+  "googleCount": 1219,
+  "googleMapsUri": "https://maps.google.com/?cid=139635326087290423&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Supper Stockholm",
+  "karro": null,
+  "listRating": null,
+  "name": "Supper",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "surfers": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000032,
+  "google": 4.4,
+  "googleAddress": "Norrlandsgatan 24, 111 43 Stockholm, Sverige",
+  "googleCount": 1416,
+  "googleMapsUri": "https://maps.google.com/?cid=5631657298367549940&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Surfers Stockholm",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Surfers",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "svartengrens": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "meat"
+  ],
+  "createdAt": 1700000000049,
+  "google": 4.4,
+  "googleAddress": "Tulegatan 24, 113 53 Stockholm, Sverige",
+  "googleCount": 716,
+  "googleMapsUri": "https://maps.google.com/?cid=10918104493505162934&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Svartengrens",
+  "karro": null,
+  "listRating": null,
+  "name": "Svartengrens",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "tako": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000033,
+  "google": 4.2,
+  "googleAddress": "Grev Turegatan 1, 114 34 Stockholm, Sverige",
+  "googleCount": 942,
+  "googleMapsUri": "https://maps.google.com/?cid=6275049531569463884&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Restaurang Tako",
+  "karro": null,
+  "listRating": null,
+  "name": "Tako",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ted": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000012,
+  "google": 4,
+  "googleAddress": "Linnégatan 11, 114 47 Stockholm, Sverige",
+  "googleCount": 373,
+  "googleMapsUri": "https://maps.google.com/?cid=4790147446662537759&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Ted",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Ted",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "tennstopet": {
+  "area": "Vasastan",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000088,
+  "google": 4.3,
+  "googleAddress": "Dalagatan 50, 113 24 Stockholm, Sverige",
+  "googleCount": 3363,
+  "googleMapsUri": "https://maps.google.com/?cid=10238924224497601601&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Tennstopet Restaurang - Bar & Pub",
+  "karro": null,
+  "listRating": null,
+  "name": "Tennstopet",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "tjoget": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "cocktails"
+  ],
+  "createdAt": 1700000000121,
+  "google": 4.2,
+  "googleAddress": "Hornsbruksgatan 24, 117 34 Stockholm, Sverige",
+  "googleCount": 1136,
+  "googleMapsUri": "https://maps.google.com/?cid=12378437113624571640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Tjoget",
+  "karro": null,
+  "listRating": null,
+  "name": "Tjoget",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "trattorian": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000006,
+  "google": 4,
+  "googleAddress": "Norr Mälarstrand Kajplats 464, 112 20 Stockholm, Sverige",
+  "googleCount": 2706,
+  "googleMapsUri": "https://maps.google.com/?cid=5171914938509810164&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Trattorian",
+  "karro": "👍🏻",
+  "listRating": null,
+  "name": "Trattorian",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "tre-valv": {
+  "area": "Gamla stan, Järntorget",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000084,
+  "google": 4.3,
+  "googleAddress": "Järntorget 83, 111 29 Stockholm, Sverige",
+  "googleCount": 6751,
+  "googleMapsUri": "https://maps.google.com/?cid=4226246341282213521&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Tre Valv",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Tre Valv",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "tutto-bene": {
+  "area": "",
+  "cats": [
+   "pizza"
+  ],
+  "createdAt": 1700000000056,
+  "google": null,
+  "karro": null,
+  "listRating": null,
+  "name": "Tutto Bene",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "ulla-winbladh": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "swedish"
+  ],
+  "createdAt": 1700000000073,
+  "google": 4.4,
+  "googleAddress": "Rosendalsvägen 8, 115 21 Stockholm, Sverige",
+  "googleCount": 2749,
+  "googleMapsUri": "https://maps.google.com/?cid=8920765846814783538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Wärdshuset Ulla Winbladh AB",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Ulla Winbladh",
+  "note": "Julbordet 🌟",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "un-poco": {
+  "area": "Östermalm",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "italian"
+  ],
+  "createdAt": 1700000000001,
+  "google": 4.4,
+  "googleAddress": "Karlavägen 28, 114 31 Stockholm, Sverige",
+  "googleCount": 1180,
+  "googleMapsUri": "https://maps.google.com/?cid=14512909415840116819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Un Poco",
+  "karro": "🌟",
+  "listRating": null,
+  "name": "Un Poco",
+  "note": "",
+  "rozbeh": null,
+  "status": "been"
+ },
+ "village-bagels": {
+  "area": "Gästrikegatan 13",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "brunch"
+  ],
+  "createdAt": 1700000000145,
+  "google": 4.7,
+  "googleAddress": "Gästrikegatan 13, 113 62 Stockholm, Sverige",
+  "googleCount": 130,
+  "googleMapsUri": "https://maps.google.com/?cid=10787813961005456612&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Village Bagels",
+  "karro": null,
+  "listRating": null,
+  "name": "Village Bagels",
+  "note": "🥯",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "wedholms-fisk": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "seafood"
+  ],
+  "createdAt": 1700000000061,
+  "google": 4.6,
+  "googleAddress": "Arsenalsgatan 1, 111 47 Stockholm, Sverige",
+  "googleCount": 954,
+  "googleMapsUri": "https://maps.google.com/?cid=3153801880801328206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "Wedholms Fisk",
+  "karro": null,
+  "listRating": null,
+  "name": "Wedholms Fisk",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ },
+ "yuc": {
+  "area": "",
+  "businessStatus": "OPERATIONAL",
+  "cats": [
+   "asian"
+  ],
+  "createdAt": 1700000000031,
+  "google": 3.9,
+  "googleAddress": "Norrtullsgatan 15, 113 29 Stockholm, Sverige",
+  "googleCount": 1574,
+  "googleMapsUri": "https://maps.google.com/?cid=17539842756872160028&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "googleName": "YUC! Mexican",
+  "karro": null,
+  "listRating": null,
+  "name": "Yuc",
+  "note": "",
+  "rozbeh": null,
+  "status": "want"
+ }
+}
