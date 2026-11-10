@@ -104,6 +104,7 @@ main{padding-block:10px 110px}
 .sheet::before{content:"";display:block;width:36px;height:4px;border-radius:2px;background:var(--line);margin:-6px auto 12px}
 @keyframes up{from{transform:translateY(24px);opacity:.6}}
 @media (prefers-reduced-motion:reduce){.sheet{animation:none}}
+.sheet.still{animation:none}
 .sheet h3{font-family:var(--display);font-size:1.3rem;margin:0 0 2px;letter-spacing:-.01em}
 .sheet .sub{color:var(--muted);font-size:.86rem;margin:0 0 12px}
 .d-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
@@ -327,7 +328,8 @@ function detailSheet(p){
 /* ---------- sheets ---------- */
 function openSheet(html, onMount){
   const host=$("#sheetHost");
-  host.innerHTML=`<div class="scrim" id="scrim"><div class="sheet" role="dialog" aria-modal="true">${html}</div></div>`;
+  const already=!!host.querySelector(".sheet");
+  host.innerHTML=`<div class="scrim" id="scrim"><div class="sheet${already?" still":""}" role="dialog" aria-modal="true">${html}</div></div>`;
   $("#scrim").addEventListener("click",e=>{ if(e.target.id==="scrim") closeSheet(); });
   onMount&&onMount(host.querySelector(".sheet"));
 }
@@ -428,19 +430,59 @@ function editSheet(p){
     };
   });
 }
+let dice={cats:[],status:"any",skipMeh:true,wide:false,last:null};
+try{ const d=JSON.parse(localStorage.getItem("dice")||"null"); if(d) dice={...dice,...d,last:null}; }catch(e){}
+function saveDice(){ try{ localStorage.setItem("dice",JSON.stringify({cats:dice.cats,status:dice.status,skipMeh:dice.skipMeh,wide:dice.wide})); }catch(e){} }
+const DICE_PRESETS=[["Drinks",["cocktails","aw"],"🍸"],["Dinner",null,"🍽️"],["Brunch & fika",["brunch","fika"],"🥞"]];
+function dicePool(){
+  return places.filter(p=>{
+    if(p.businessStatus==="CLOSED_PERMANENTLY") return false;
+    if(dice.cats.length && !(dice.wide ? (p.cats||[]).some(c=>dice.cats.includes(c)) : dice.cats.includes((p.cats||[])[0]))) return false;
+    if(dice.status!=="any" && p.status!==dice.status) return false;
+    if(dice.skipMeh && [p.rozbeh,p.karro].some(v=>v in VAL && VAL[v]<=1)) return false;
+    return true;
+  });
+}
+function rollFrom(pool){ // higher-rated and want-to-try get more chances; avoid repeating the last pick
+  const cand=pool.length>1?pool.filter(p=>p.id!==dice.last):pool;
+  const w=cand.map(p=>1+(score(p)??2)+(p.status==="want"?2:0)); let t=Math.random()*w.reduce((x,y)=>x+y,0);
+  for(let i=0;i<cand.length;i++){ t-=w[i]; if(t<=0) return cand[i]; } return cand[0];
+}
 function diceSheet(){
-  let pool=filtered(); if(!pool.length){ toast("No places in this view to pick from"); return; }
-  const pick=()=>{ // weighted: higher-rated and want-to-try get more chances
-    const w=pool.map(p=>1+(score(p)??2)+(p.status==="want"?2:0)); let t=Math.random()*w.reduce((a,b)=>a+b,0);
-    for(let i=0;i<pool.length;i++){ t-=w[i]; if(t<=0) return pool[i]; } return pool[0]; };
-  const show=()=>{ const p=pick(); const s=scoreEmoji(score(p));
-    openSheet(`<div class="pick"><p class="sub">Tonight you're going to…</p><div class="big">${esc(p.name)}</div>
-      <p class="sub">${esc([(p.cats||[]).map(c=>CAT[c]?.e).join(" "),p.area].filter(Boolean).join(" · "))} ${s?" · "+s:""}</p>
-      ${p.note?`<div class="note" style="margin-bottom:12px">${esc(p.note)}</div>`:""}
-      <div class="row"><button class="btn ghost" id="again">🎲 Roll again</button><a class="btn primary" style="text-align:center;text-decoration:none" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Maps</a></div>
-      <p class="sub" style="margin-top:10px">Picks from what's on screen now. Filter first, e.g. 🍕 Pizza + Want to try.</p></div>`,
-      sh=>sh.querySelector("#again").onclick=show); };
-  show();
+  const foodIds=CATS.map(c=>c.id).filter(id=>!["cocktails","aw","brunch","fika"].includes(id));
+  const draw=(p)=>{
+    const pool=dicePool();
+    const chip=(id,txt,on)=>`<button class="chip" data-dc="${esc(id)}" aria-pressed="${on}">${txt}</button>`;
+    const presetOn=ids=>ids.length===dice.cats.length && ids.every(i=>dice.cats.includes(i));
+    const res = p ? `<div class="pick" style="border:1px solid var(--line);border-radius:14px;padding:12px;margin:12px 0">
+        <p class="sub" style="margin:0">Tonight you're going to…</p><div class="big">${esc(p.name)}</div>
+        <p class="sub" style="margin:0 0 8px">${esc([(p.cats||[]).map(c=>CAT[c]?.e).join(" "),p.area].filter(Boolean).join(" · "))}${p.google!=null?` · ★ ${Number(p.google).toFixed(1)}`:""}${scoreEmoji(score(p))?" · "+scoreEmoji(score(p)):""}</p>
+        ${p.note?`<div class="note">${esc(p.note)}</div>`:""}
+        <div class="row"><a class="btn ghost" style="text-align:center;text-decoration:none" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Maps</a><button class="btn ghost" id="dz-open">Open</button></div>
+      </div>` : "";
+    openSheet(`<h3>🎲 Random pick</h3><p class="sub">Choose what you're in the mood for, then roll.</p>
+      <div class="cats" style="margin-bottom:8px">
+        ${chip("__any","✨ Anything",!dice.cats.length)}
+        ${DICE_PRESETS.map(([l,ids,e])=>{ const v=ids||foodIds; return `<button class="chip" data-dp="${l}" aria-pressed="${presetOn(v)}">${e} ${l}</button>`; }).join("")}
+      </div>
+      <div class="cats" style="margin-bottom:12px">${CATS.map(c=>chip(c.id,`${esc(c.e)} ${esc(c.label)}`,dice.cats.includes(c.id))).join("")}</div>
+      <div class="seg" style="margin-bottom:8px">${[["any","Any"],["want","🔖 Want to try"],["been","✓ Been"]].map(([k,l])=>`<button data-ds="${k}" aria-pressed="${dice.status===k}">${l}</button>`).join("")}</div>
+      <label style="display:flex;gap:8px;align-items:center;font-size:.86rem;color:var(--muted)"><input type="checkbox" id="dz-meh" ${dice.skipMeh?"checked":""}> Skip places one of us rated 🥴 or 🤢</label>
+      <label style="display:flex;gap:8px;align-items:center;font-size:.86rem;color:var(--muted);margin-top:4px"><input type="checkbox" id="dz-wide" ${dice.wide?"checked":""}> Also include places that only have it as an extra tag (e.g. a restaurant with a bar)</label>
+      ${res}
+      <button class="btn primary" id="dz-roll" style="width:100%;margin-top:12px" ${pool.length?"":"disabled"}>${pool.length?`🎲 ${p?"Roll again":"Roll"} (${pool.length} places)`:"No places match. Pick more types."}</button>`,
+    sh=>{
+      sh.querySelectorAll("[data-dc]").forEach(b=>b.onclick=()=>{ const id=b.dataset.dc;
+        dice.cats = id==="__any" ? [] : (dice.cats.includes(id)?dice.cats.filter(x=>x!==id):[...dice.cats,id]); saveDice(); draw(null); });
+      sh.querySelectorAll("[data-dp]").forEach(b=>b.onclick=()=>{ const pr=DICE_PRESETS.find(x=>x[0]===b.dataset.dp); dice.cats=[...(pr[1]||foodIds)]; saveDice(); draw(null); });
+      sh.querySelectorAll("[data-ds]").forEach(b=>b.onclick=()=>{ dice.status=b.dataset.ds; saveDice(); draw(null); });
+      sh.querySelector("#dz-meh").onchange=e=>{ dice.skipMeh=e.target.checked; saveDice(); draw(null); };
+      sh.querySelector("#dz-wide").onchange=e=>{ dice.wide=e.target.checked; saveDice(); draw(null); };
+      sh.querySelector("#dz-roll").onclick=()=>{ const pl=dicePool(); if(!pl.length) return; const r=rollFrom(pl); dice.last=r.id; draw(r); };
+      const o=sh.querySelector("#dz-open"); if(o) o.onclick=()=>detailSheet(p);
+    });
+  };
+  draw(null);
 }
 
 /* ---------- events ---------- */
