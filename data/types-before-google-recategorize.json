@@ -1,0 +1,898 @@
+{
+ "20hundra5": {
+  "name": "20hundra5",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "800-grader": {
+  "name": "800 Grader",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "a-bar-called-gemma": {
+  "name": "A Bar Called Gemma",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "a-la-lo": {
+  "name": "A La Lo",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "ag": {
+  "name": "AG",
+  "cats": [
+   "meat"
+  ]
+ },
+ "alba-vinbar": {
+  "name": "Alba Vinbar",
+  "cats": [
+   "aw"
+  ]
+ },
+ "alskade-traditioner": {
+  "name": "Älskade Traditioner",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "apo": {
+  "name": "APO",
+  "cats": [
+   "asian",
+   "cocktails"
+  ]
+ },
+ "apropos": {
+  "name": "Apropos",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "art": {
+  "name": "ART",
+  "cats": [
+   "asian"
+  ]
+ },
+ "artilleriet": {
+  "name": "Artilleriet",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "astoria": {
+  "name": "Astoria",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "at-six": {
+  "name": "At Six",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "aubergine": {
+  "name": "Aubergine",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "b-a-r": {
+  "name": "B.A.R",
+  "cats": [
+   "seafood"
+  ]
+ },
+ "babette": {
+  "name": "Babette",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "bageriet-bulleboden": {
+  "name": "Bageriet Bulleboden",
+  "cats": [
+   "med"
+  ]
+ },
+ "balzac": {
+  "name": "Balzac",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "bar-abrovinsch": {
+  "name": "Bar Abrovinsch",
+  "cats": [
+   "aw"
+  ]
+ },
+ "bar-ingrid": {
+  "name": "Bar Ingrid",
+  "cats": [
+   "aw"
+  ]
+ },
+ "bar-nimes": {
+  "name": "Bar Nimes",
+  "cats": [
+   "aw"
+  ]
+ },
+ "bar-nombre": {
+  "name": "Bar Nombre",
+  "cats": [
+   "latin"
+  ]
+ },
+ "bara-caisas": {
+  "name": "Bara Caisas",
+  "cats": [
+   "aw"
+  ]
+ },
+ "barrels": {
+  "name": "Barrels",
+  "cats": [
+   "burger"
+  ]
+ },
+ "bastardo": {
+  "name": "Bastardo",
+  "cats": [
+   "italian"
+  ]
+ },
+ "belgobaren": {
+  "name": "Belgobaren",
+  "cats": [
+   "seafood"
+  ]
+ },
+ "bibon": {
+  "name": "Bibon",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "birkastans": {
+  "name": "Birkastans",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "bistro-vincent": {
+  "name": "Bistro Vincent",
+  "cats": [
+   "swedish",
+   "aw"
+  ]
+ },
+ "bla-porten": {
+  "name": "Blå Porten",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "black-milk-gastro": {
+  "name": "Black Milk Gastro",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "brasserie-astrid": {
+  "name": "Brasserie Astrid",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "brasserie-godot": {
+  "name": "Brasserie Godot",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "brunchoteket": {
+  "name": "Brunchoteket",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "byblos": {
+  "name": "Byblos",
+  "cats": [
+   "med"
+  ]
+ },
+ "cafe-saturnus": {
+  "name": "Café Saturnus",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "caffeine-cravings": {
+  "name": "Caffeine & Cravings",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "calle-p": {
+  "name": "Calle P",
+  "cats": [
+   "pizza",
+   "cocktails"
+  ]
+ },
+ "capri-due": {
+  "name": "Capri Due",
+  "cats": [
+   "italian"
+  ]
+ },
+ "ciccio-s": {
+  "name": "Ciccio's",
+  "cats": [
+   "italian"
+  ]
+ },
+ "coquetel-social": {
+  "name": "Coquetel Social",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "cork-vinbar": {
+  "name": "Cork Vinbar",
+  "cats": [
+   "aw"
+  ]
+ },
+ "coup-d-etat": {
+  "name": "Coup d'État",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "crazy-chicken": {
+  "name": "Crazy Chicken",
+  "cats": [
+   "burger"
+  ]
+ },
+ "cucina-povera": {
+  "name": "Cucina Povera",
+  "cats": [
+   "italian"
+  ]
+ },
+ "cypern": {
+  "name": "Cypern",
+  "cats": [
+   "med"
+  ]
+ },
+ "dailys-bistro": {
+  "name": "Dailys Bistro",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "deglabbet": {
+  "name": "Deglabbet",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "den-gamle-och-havet": {
+  "name": "Den Gamle och Havet",
+  "cats": [
+   "italian"
+  ]
+ },
+ "dersch": {
+  "name": "Dersch",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "din-din-club": {
+  "name": "Din Din Club",
+  "cats": [
+   "asian"
+  ]
+ },
+ "eataly": {
+  "name": "Eataly",
+  "cats": [
+   "italian",
+   "brunch"
+  ]
+ },
+ "emberlin": {
+  "name": "Emberlin",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "esa-sushi": {
+  "name": "Esa Sushi",
+  "cats": [
+   "asian"
+  ]
+ },
+ "esperanza": {
+  "name": "Esperanza",
+  "cats": [
+   "latin"
+  ]
+ },
+ "esperia": {
+  "name": "Esperia",
+  "cats": [
+   "med"
+  ]
+ },
+ "fabrique": {
+  "name": "Fabrique",
+  "cats": [
+   "fika"
+  ]
+ },
+ "farang": {
+  "name": "Farang",
+  "cats": [
+   "asian"
+  ]
+ },
+ "flippin-burgers": {
+  "name": "Flippin' Burgers",
+  "cats": [
+   "burger"
+  ]
+ },
+ "forma": {
+  "name": "Forma",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "frippe": {
+  "name": "Frippe",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "gazza": {
+  "name": "Gazza",
+  "cats": [
+   "italian"
+  ]
+ },
+ "gioia": {
+  "name": "Gioia",
+  "cats": [
+   "italian"
+  ]
+ },
+ "glashuset": {
+  "name": "Glashuset",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "greasy-spoon": {
+  "name": "Greasy Spoon",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "gretas": {
+  "name": "Gretas",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "grill": {
+  "name": "Grill",
+  "cats": [
+   "meat"
+  ]
+ },
+ "grus-grus": {
+  "name": "Grus Grus",
+  "cats": [
+   "aw"
+  ]
+ },
+ "hallwyska": {
+  "name": "Hallwyska",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "hantverket": {
+  "name": "Hantverket",
+  "cats": [
+   "swedish",
+   "cocktails"
+  ]
+ },
+ "hasselssons": {
+  "name": "Hasselssons",
+  "cats": [
+   "seafood"
+  ]
+ },
+ "hattori": {
+  "name": "Hattori",
+  "cats": [
+   "asian"
+  ]
+ },
+ "himlen": {
+  "name": "Himlen",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "ino-izakaya": {
+  "name": "Ino Izakaya",
+  "cats": [
+   "asian"
+  ]
+ },
+ "italiano": {
+  "name": "Italiano",
+  "cats": [
+   "italian"
+  ]
+ },
+ "kasai": {
+  "name": "Kasai",
+  "cats": [
+   "asian"
+  ]
+ },
+ "kavalleriet": {
+  "name": "Kavalleriet",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "kura": {
+  "name": "Kura",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "la-perla": {
+  "name": "La Perla",
+  "cats": [
+   "italian"
+  ]
+ },
+ "la-vecchia-signora": {
+  "name": "La Vecchia Signora",
+  "cats": [
+   "italian"
+  ]
+ },
+ "la-vventura": {
+  "name": "La'vventura",
+  "cats": [
+   "italian"
+  ]
+ },
+ "ladan": {
+  "name": "Lådan",
+  "cats": [
+   "aw"
+  ]
+ },
+ "las-brasas": {
+  "name": "Las Brasas",
+  "cats": [
+   "latin"
+  ]
+ },
+ "le-jungfrugatan": {
+  "name": "Le Jungfrugatan",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "leche-negra": {
+  "name": "Leche Negra",
+  "cats": [
+   "latin"
+  ]
+ },
+ "lejontornet": {
+  "name": "Lejontornet",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "lennart-bror-fisk": {
+  "name": "Lennart & Bror Fisk",
+  "cats": [
+   "seafood"
+  ]
+ },
+ "lennart-bror-kott": {
+  "name": "Lennart & Bror Kött",
+  "cats": [
+   "meat"
+  ]
+ },
+ "leoparden": {
+  "name": "Leoparden",
+  "cats": [
+   "aw"
+  ]
+ },
+ "levinskys": {
+  "name": "Levinskys",
+  "cats": [
+   "burger"
+  ]
+ },
+ "lilla-ego": {
+  "name": "Lilla Ego",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "lucy-s-flower-shop": {
+  "name": "Lucy's Flower Shop",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "macelleria": {
+  "name": "Macelleria",
+  "cats": [
+   "italian"
+  ]
+ },
+ "mahalo": {
+  "name": "Mahalo",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "marcos": {
+  "name": "Marcos",
+  "cats": [
+   "italian"
+  ]
+ },
+ "masen": {
+  "name": "Måsen",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "master-anders": {
+  "name": "Mäster Anders",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "meno-male": {
+  "name": "Meno Male",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "milles": {
+  "name": "Milles",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "misshumasshu": {
+  "name": "Misshumasshu",
+  "cats": [
+   "asian"
+  ]
+ },
+ "miyakodori": {
+  "name": "Miyakodori",
+  "cats": [
+   "asian"
+  ]
+ },
+ "mr-cake": {
+  "name": "Mr Cake",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "nektar": {
+  "name": "Nektar",
+  "cats": [
+   "aw"
+  ]
+ },
+ "noema": {
+  "name": "Noema",
+  "cats": [
+   "meat"
+  ]
+ },
+ "noi-by-nobis": {
+  "name": "NOI by Nobis",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "non-solo-bar": {
+  "name": "Non Solo Bar",
+  "cats": [
+   "aw"
+  ]
+ },
+ "nosh-chow": {
+  "name": "Nosh & Chow",
+  "cats": [
+   "asian"
+  ]
+ },
+ "nybrogatan-38": {
+  "name": "Nybrogatan 38",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "nyko": {
+  "name": "Nyko",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "olli": {
+  "name": "Olli",
+  "cats": [
+   "italian",
+   "cocktails"
+  ]
+ },
+ "oummi": {
+  "name": "Oummi",
+  "cats": [
+   "med"
+  ]
+ },
+ "petite-france": {
+  "name": "Petite France",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "pom-flora": {
+  "name": "Pom & Flora",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "posto": {
+  "name": "Posto",
+  "cats": [
+   "italian"
+  ]
+ },
+ "prime": {
+  "name": "Prime",
+  "cats": [
+   "burger"
+  ]
+ },
+ "prinsen": {
+  "name": "Prinsen",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "raw-sushi": {
+  "name": "Raw Sushi",
+  "cats": [
+   "asian"
+  ]
+ },
+ "restaurang-goteborg": {
+  "name": "Restaurang Göteborg",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "restaurang-parken": {
+  "name": "Restaurang Parken",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "rivetta": {
+  "name": "Rivetta",
+  "cats": [
+   "italian"
+  ]
+ },
+ "savant-bar": {
+  "name": "Savant Bar",
+  "cats": [
+   "aw"
+  ]
+ },
+ "savoj": {
+  "name": "Savoj",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "scarpetta": {
+  "name": "Scarpetta",
+  "cats": [
+   "italian",
+   "cocktails"
+  ]
+ },
+ "snabba-katten": {
+  "name": "Snabba Katten",
+  "cats": [
+   "aw",
+   "cocktails"
+  ]
+ },
+ "spago": {
+  "name": "Spago",
+  "cats": [
+   "italian"
+  ]
+ },
+ "sparrow-bistro": {
+  "name": "Sparrow Bistro",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "sperling-co": {
+  "name": "Sperling & Co",
+  "cats": [
+   "meat"
+  ]
+ },
+ "spesso": {
+  "name": "Spesso",
+  "cats": [
+   "italian"
+  ]
+ },
+ "spring-rolls": {
+  "name": "Spring Rolls",
+  "cats": [
+   "asian"
+  ]
+ },
+ "sthlm-brunchclub": {
+  "name": "Sthlm Brunchclub",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "stockholm-1897": {
+  "name": "Stockholm 1897",
+  "cats": [
+   "fika"
+  ]
+ },
+ "strandvagen-1": {
+  "name": "Strandvägen 1",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "sukai": {
+  "name": "Sukai",
+  "cats": [
+   "asian"
+  ]
+ },
+ "supper": {
+  "name": "Supper",
+  "cats": [
+   "asian"
+  ]
+ },
+ "surfers": {
+  "name": "Surfers",
+  "cats": [
+   "asian"
+  ]
+ },
+ "svartengrens": {
+  "name": "Svartengrens",
+  "cats": [
+   "meat"
+  ]
+ },
+ "tako": {
+  "name": "Tako",
+  "cats": [
+   "asian"
+  ]
+ },
+ "ted": {
+  "name": "Ted",
+  "cats": [
+   "italian"
+  ]
+ },
+ "tennstopet": {
+  "name": "Tennstopet",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "tjoget": {
+  "name": "Tjoget",
+  "cats": [
+   "cocktails"
+  ]
+ },
+ "trattorian": {
+  "name": "Trattorian",
+  "cats": [
+   "italian"
+  ]
+ },
+ "tre-valv": {
+  "name": "Tre Valv",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "tutto-bene": {
+  "name": "Tutto Bene",
+  "cats": [
+   "pizza"
+  ]
+ },
+ "ulla-winbladh": {
+  "name": "Ulla Winbladh",
+  "cats": [
+   "swedish"
+  ]
+ },
+ "un-poco": {
+  "name": "Un Poco",
+  "cats": [
+   "italian"
+  ]
+ },
+ "village-bagels": {
+  "name": "Village Bagels",
+  "cats": [
+   "brunch"
+  ]
+ },
+ "wedholms-fisk": {
+  "name": "Wedholms Fisk",
+  "cats": [
+   "seafood"
+  ]
+ },
+ "yuc": {
+  "name": "Yuc",
+  "cats": [
+   "asian"
+  ]
+ }
+}
