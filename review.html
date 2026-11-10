@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Check the list – Stockholm Eats</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<style>
+:root{
+  --bg:#F3F4F6; --surface:#FFFFFF; --sunk:#ECEEF2; --line:#E2E5EA;
+  --ink:#15181E; --muted:#6A707C;
+  --accent:#2448C7; --accent-ink:#FFFFFF; --accent-soft:#E6EBFB;
+  --ok:#17845A; --warn:#B4530F; --bad:#B42318;
+  --display:"Bricolage Grotesque",ui-rounded,system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0E1014; --surface:#171A20; --sunk:#20242C; --line:#2A2F38;
+  --ink:#ECEEF2; --muted:#9AA1AE; --accent:#8EA6FF; --accent-ink:#0B1230; --accent-soft:#1E2747;
+  --ok:#4FD39A; --warn:#F29A5B; --bad:#FF8A80; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.4;-webkit-tap-highlight-color:transparent;padding-top:env(safe-area-inset-top,0px)}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:680px;margin:0 auto;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+header{padding-block:16px 6px}
+h1{font-family:var(--display);font-weight:800;font-size:1.5rem;margin:0 0 4px;letter-spacing:-.02em}
+header p{margin:0;color:var(--muted);font-size:.9rem}
+header a{color:var(--accent)}
+.bar{height:6px;background:var(--sunk);border-radius:3px;margin-top:12px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+main{padding-block:8px 140px;display:grid;gap:18px}
+section h2{font-family:var(--display);font-size:1.05rem;margin:0 0 2px}
+section .why{color:var(--muted);font-size:.84rem;margin:0 0 8px}
+.items{display:grid;gap:8px}
+.it{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:8px}
+.it.done-ok{border-color:color-mix(in srgb,var(--ok) 50%,var(--line))}
+.it.done-ch{border-color:color-mix(in srgb,var(--accent) 60%,var(--line))}
+.it.done-rm{border-color:color-mix(in srgb,var(--bad) 50%,var(--line));opacity:.75}
+.hd{display:flex;gap:8px;align-items:flex-start}
+.hd .nm{flex:1;min-width:0}
+.hd b{font-size:1rem;overflow-wrap:anywhere}
+.hd .now{display:block;color:var(--muted);font-size:.8rem;margin-top:1px}
+.q{font-size:.86rem;background:var(--sunk);border-radius:10px;padding:7px 10px}
+.acts{display:flex;flex-wrap:wrap;gap:6px}
+.b{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:600;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:4px}
+.b[aria-pressed="true"].ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.b[aria-pressed="true"].ch{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.b[aria-pressed="true"].rm{background:var(--bad);border-color:var(--bad);color:#fff}
+.ed{display:grid;gap:10px;border-top:1px dashed var(--line);padding-top:10px}
+.ed label{display:grid;gap:4px;font-size:.74rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.ed input,.ed textarea{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 11px;font-size:16px;text-transform:none;letter-spacing:0;font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 9px;font-size:.8rem;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip.first[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.hint{font-size:.76rem;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:500}
+.newrow{display:flex;gap:6px}
+.newrow input:first-child{width:64px;flex:none;text-align:center}
+.newrow input:nth-child(2){flex:1;min-width:0}
+.foot{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));z-index:5}
+.foot .in{max-width:680px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.foot .cnt{flex:1;min-width:0;font-size:.84rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:700}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.btn.g{background:var(--sunk)}
+.btn:disabled{opacity:.5}
+textarea.out{width:100%;min-height:160px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);font-size:13px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(80px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--surface);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.86rem;z-index:30;max-width:calc(100% - 32px)}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Check the list</h1>
+  <p>Tap <b>✓ OK</b> if it's right, or <b>✎ Change</b> to fix the name, type or notes. Your progress is saved on this phone, so you can stop and continue later. <a href="./">Back to the app</a></p>
+  <div class="bar"><i id="prog"></i></div>
+</header>
+<main class="wrap" id="main"><p>Loading…</p></main>
+<div class="foot"><div class="in">
+  <span class="cnt" id="cnt">0 of 0 checked</span>
+  <button class="btn g" id="copy">Copy summary</button>
+  <button class="btn p" id="save">Save to app</button>
+</div></div>
+<div id="toastHost"></div>
+<script>
+const BASE=[["italian","🇮🇹 Italian"],["pizza","🍕 Pizza"],["meat","🥩 Meat & grill"],["burger","🍔 Burgers"],["asian","🍣 Asian & sushi"],["seafood","🦞 Seafood"],["med","🫒 Greek & Middle East"],["latin","🌮 Latin & tapas"],["swedish","🇸🇪 Bistro & Swedish"],["aw","🍷 Wine & AW"],["cocktails","🍸 Cocktails"],["brunch","🥞 Brunch"],["fika","🥐 Fika"]];
+const GROUPS=[
+ {t:"Not found on Google",w:"Google found the wrong place or nothing. Is the name right? Is it still open?",items:[
+  ["la-vecchia-signora","Google only found one in Copenhagen. Is there one in Stockholm, and what's the right name?"],
+  ["brunchoteket","Google only found one in Gothenburg. Is the name or area right?"],
+  ["crazy-chicken","Not found at all. Right name? Still open?"],
+  ["kavalleriet","Not found at all. Right name? Still open?"],
+  ["tutto-bene","Google only found Tutto Bello (Tegnérlunden). Is that the one you mean?"],
+  ["marcos","Google says it's closed for good. Keep it or remove it?"]]},
+ {t:"Google lists two cuisines",w:"I picked one. The first highlighted type decides which section it's in.",items:[
+  ["forma","I picked Bistro. Google also says Asian."],
+  ["balzac","I picked Bistro (French). Google also says Seafood."],
+  ["restaurang-goteborg","I picked Seafood. Google also says Swedish."],
+  ["bar-nombre","I picked Spanish. Google also says Scandinavian."],
+  ["din-din-club","I picked Asian. Google also says American."],
+  ["raw-sushi","I picked Sushi. Google also says Barbecue."],
+  ["prime","I picked Burgers. Google also says Barbecue."]]},
+ {t:"Google disagreed with the old list",w:"I went with Google. Is that right?",items:[
+  ["bageriet-bulleboden","Google says bakery, so it's under Fika. Your note said pita gyros. Greek & Middle East instead?"],
+  ["esperanza","Google says Italian. Is it the right place?"],
+  ["tre-valv","Google says Italian. Is it the right place?"],
+  ["yuc","You had it under Asian. Google says Mexican."],
+  ["supper","You had it under Asian. Google says South American."]]},
+ {t:"My guess, Google gives no cuisine",w:"Google only says restaurant or bar, so these are still my guess.",items:[
+  ["artilleriet"],["babette"],["bibon"],["black-milk-gastro"],["emberlin"],["milles"],["masen"],["nybrogatan-38"],["nyko"],["restaurang-parken"],["sparrow-bistro"],["strandvagen-1"],
+  ["byblos","Based on your note \"libanesiskt\"."],["las-brasas","Based on the name."],["spesso","Based on the name."],["bar-abrovinsch"],["bar-nimes"]]}
+];
+const ALL_IDS=GROUPS.flatMap(g=>g.items.map(i=>i[0]));
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;$("#toastHost").replaceChildren(t);setTimeout(()=>t.remove(),2400);}
+let db=null, places={}, cats=[...BASE], st={};
+try{ st=JSON.parse(localStorage.getItem("review-v1")||"{}"); }catch(e){}
+function saveLocal(){ try{ localStorage.setItem("review-v1",JSON.stringify(st)); }catch(e){} }
+const label=id=>(cats.find(c=>c[0]===id)||[id,id])[1];
+function mapsUrl(p){ return p.googleMapsUri && /^https:\/\/maps\.google\.com\//.test(p.googleMapsUri) ? p.googleMapsUri : "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([p.name,p.area,"Stockholm"].filter(Boolean).join(" ")); }
+
+function itemHtml(id,q){
+  const p=places[id]; if(!p) return "";
+  const s=st[id]||{}; const cls=s.v==="ok"?"done-ok":s.v==="ch"?"done-ch":s.v==="rm"?"done-rm":"";
+  const cur=(p.cats||[]).map(label).join(" · ");
+  const ed=s.v==="ch"?editHtml(id,p,s):"";
+  return `<div class="it ${cls}" id="it-${id}">
+    <div class="hd"><div class="nm"><b>${esc(p.name)}</b><span class="now">Now: ${esc(cur)}${p.area?" — "+esc(p.area):""}</span></div></div>
+    ${q?`<div class="q">${esc(q)}</div>`:""}
+    <div class="acts">
+      <button class="b ok" data-v="ok" data-id="${id}" aria-pressed="${s.v==="ok"}">✓ OK</button>
+      <button class="b ch" data-v="ch" data-id="${id}" aria-pressed="${s.v==="ch"}">✎ Change</button>
+      <button class="b rm" data-v="rm" data-id="${id}" aria-pressed="${s.v==="rm"}">🗑 Remove</button>
+      <a class="b" href="${mapsUrl(p)}" target="_blank" rel="noopener">📍 Maps</a>
+    </div>${ed}</div>`;
+}
+function editHtml(id,p,s){
+  const sel=s.cats||[...(p.cats||[])];
+  return `<div class="ed">
+    <label>Name<input data-f="name" data-id="${id}" value="${esc(s.name??p.name)}"></label>
+    <label>Area or address<input data-f="area" data-id="${id}" value="${esc(s.area??p.area??"")}"></label>
+    <div><label>Type <span class="hint">The first one (blue) decides the section. To change it, tap Clear and pick again in order.</span></label>
+      <button class="b" data-clear="${id}" style="margin-top:6px;justify-self:start">Clear types</button>
+      <div class="chips" style="margin-top:6px">${cats.map(([cid,l])=>`<button class="chip${sel[0]===cid?" first":""}" data-c="${cid}" data-id="${id}" aria-pressed="${sel.includes(cid)}">${esc(l)}</button>`).join("")}</div>
+      <div class="newrow" style="margin-top:6px"><input id="ne-${id}" maxlength="8" placeholder="🇮🇷" aria-label="Emoji"><input id="nn-${id}" maxlength="30" placeholder="New type, e.g. Persian" aria-label="New type name"><button class="b" data-newcat="${id}">Add</button></div>
+    </div>
+    <label>Notes<textarea data-f="note" data-id="${id}" rows="2">${esc(s.note??p.note??"")}</textarea></label>
+  </div>`;
+}
+function render(){
+  $("#main").innerHTML=GROUPS.map(g=>`<section><h2>${esc(g.t)}</h2><p class="why">${esc(g.w)}</p><div class="items">${g.items.map(([id,q])=>itemHtml(id,q)).join("")}</div></section>`).join("");
+  counts();
+}
+function counts(){
+  const n=ALL_IDS.filter(id=>places[id]).length, d=ALL_IDS.filter(id=>st[id]&&st[id].v).length;
+  $("#cnt").textContent=`${d} of ${n} checked`; $("#prog").style.width=(n?d/n*100:0)+"%";
+}
+function rerenderItem(id){ const el=$("#it-"+id); const g=GROUPS.find(g=>g.items.some(i=>i[0]===id)); const q=g.items.find(i=>i[0]===id)[1]; el.outerHTML=itemHtml(id,q); counts(); }
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button"); if(!t) return;
+  const id=t.dataset.id;
+  if(t.dataset.v){ st[id]=st[id]||{}; st[id].v = st[id].v===t.dataset.v ? null : t.dataset.v; saveLocal(); rerenderItem(id); return; }
+  if(t.dataset.c){ const s=st[id]; s.cats=s.cats||[...(places[id].cats||[])]; const c=t.dataset.c; s.cats=s.cats.includes(c)?s.cats.filter(x=>x!==c):[...s.cats,c]; saveLocal(); rerenderItem(id); return; }
+  if(t.dataset.clear){ const s=st[t.dataset.clear]; s.cats=[]; saveLocal(); rerenderItem(t.dataset.clear); return; }
+  if(t.dataset.newcat){ const n=$("#nn-"+id).value.trim(); if(!n){ toast("Type a name for the new type"); return; }
+    const em=$("#ne-"+id).value.trim()||"📌"; const slug=n.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    let cid=(cats.find(c=>c[1].toLowerCase().endsWith(n.toLowerCase()))||[])[0];
+    if(!cid){ cid="c-"+(slug||Date.now()); cats.push([cid,em+" "+n]); st._newcats=st._newcats||{}; st._newcats[cid]={label:n,e:em,createdAt:Date.now()}; }
+    const s=st[id]; s.cats=s.cats||[...(places[id].cats||[])]; if(!s.cats.includes(cid)) s.cats.push(cid); saveLocal(); rerenderItem(id); return; }
+});
+document.addEventListener("input",e=>{ const t=e.target; if(!t.dataset.f) return; st[t.dataset.id]=st[t.dataset.id]||{}; st[t.dataset.id][t.dataset.f]=t.value; saveLocal(); });
+
+function changesFor(id){
+  const p=places[id], s=st[id]||{}; const out={};
+  if(s.v!=="ch") return out;
+  if(s.name!=null && s.name.trim() && s.name.trim()!==p.name) out.name=s.name.trim();
+  if(s.area!=null && s.area.trim()!==(p.area||"")) out.area=s.area.trim();
+  if(s.note!=null && s.note.trim()!==(p.note||"")) out.note=s.note.trim();
+  if(s.cats && s.cats.length && JSON.stringify(s.cats)!==JSON.stringify(p.cats||[])) out.cats=s.cats;
+  return out;
+}
+function summary(){
+  const lines=["Check results – Stockholm Eats",""];
+  for(const g of GROUPS){ lines.push("## "+g.t); for(const [id] of g.items){ const p=places[id]; if(!p) continue; const s=st[id]||{};
+    if(!s.v){ lines.push(`- ${p.name}: not checked`); continue; }
+    if(s.v==="ok"){ lines.push(`- ${p.name}: OK`); continue; }
+    if(s.v==="rm"){ lines.push(`- ${p.name}: REMOVE`); continue; }
+    const c=changesFor(id); const bits=[];
+    if(c.name) bits.push(`name → "${c.name}"`); if(c.area!=null) bits.push(`area → "${c.area}"`);
+    if(c.cats) bits.push(`types → ${c.cats.map(label).join(", ")}`); if(c.note!=null) bits.push(`note → "${c.note}"`);
+    lines.push(`- ${p.name}: ${bits.length?bits.join("; "):"change (nothing edited yet)"}`); }
+    lines.push(""); }
+  return lines.join("\n");
+}
+$("#copy").onclick=async()=>{
+  const txt=summary();
+  try{ await navigator.clipboard.writeText(txt); toast("Copied. Paste it in the chat with Claude."); }
+  catch(e){ const ta=document.createElement("textarea"); ta.className="out"; ta.value=txt; $("#main").prepend(ta); ta.focus(); ta.select(); toast("Select all and copy the text at the top"); window.scrollTo(0,0); }
+};
+let armed=false;
+$("#save").onclick=async()=>{
+  if(!db){ toast("Not connected. Use Copy summary instead."); return; }
+  const ups=ALL_IDS.filter(id=>places[id]&&st[id]&&(st[id].v==="rm"||Object.keys(changesFor(id)).length));
+  if(!ups.length){ toast("Nothing to save yet. Tick ✎ Change or 🗑 Remove first."); return; }
+  if(!armed){ armed=true; $("#save").textContent=`Tap again: save ${ups.length}`; setTimeout(()=>{armed=false;$("#save").textContent="Save to app";},4000); return; }
+  armed=false; $("#save").disabled=true; $("#save").textContent="Saving…";
+  try{
+    for(const [cid,c] of Object.entries(st._newcats||{})){ const used=ups.some(id=>(changesFor(id).cats||[]).includes(cid)); if(used) await db.collection("categories").doc(cid).set(c); }
+    for(const id of ups){ if(st[id].v==="rm") await db.collection("places").doc(id).delete(); else await db.collection("places").doc(id).update(changesFor(id)); }
+    toast(`Saved ${ups.length} changes to the app`);
+    for(const id of ups){ if(st[id].v==="rm") st[id]={v:"rm",saved:true}; else st[id]={v:"ok"}; } saveLocal(); await load();
+  }catch(e){ toast("Couldn't save everything. Try again, or use Copy summary."); }
+  $("#save").disabled=false; $("#save").textContent="Save to app";
+};
+async function load(){
+  const [ps,cs]=await Promise.all([db.collection("places").limit(1000).get(),db.collection("categories").limit(200).get()]);
+  places=Object.fromEntries(ps.docs.map(d=>[d.id,d.data()]));
+  cats=[...BASE,...cs.docs.map(d=>[d.id,(d.data().e||"📌")+" "+(d.data().label||d.id)]),...Object.entries(st._newcats||{}).filter(([k])=>!cs.docs.some(d=>d.id===k)).map(([k,c])=>[k,c.e+" "+c.label])];
+  render();
+}
+(async()=>{
+  try{ firebase.initializeApp(window.FIREBASE_CONFIG); db=firebase.firestore(); await load(); }
+  catch(e){ $("#main").innerHTML="<p>Couldn't load the list. Check your connection and reload.</p>"; }
+})();
+</script>
+</body>
+</html>
