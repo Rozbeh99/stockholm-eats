@@ -372,7 +372,7 @@ function editSheet(p){
       <div><div style="font-size:.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Type (pick one or more)</div>
         <div class="cats" id="f-cats"></div>
         <div class="row" id="f-ncrow" hidden style="margin-top:8px;align-items:center">
-          <input id="f-nce" maxlength="8" placeholder="🇮🇷" aria-label="Emoji for the new type" style="flex:0 0 64px;text-align:center">
+          <input id="f-nce" maxlength="8" placeholder="Emoji" aria-label="Emoji for the new type (optional)" style="flex:0 0 64px;text-align:center">
           <input id="f-ncn" maxlength="30" placeholder="e.g. Persian" aria-label="Name of the new type">
           <button type="button" class="btn primary" id="f-ncadd" style="flex:none;padding:10px 14px">Add</button>
         </div></div>
@@ -391,6 +391,7 @@ function editSheet(p){
       box.querySelector("#f-newcat").onclick=()=>{ ncrow.hidden=false; sh.querySelector("#f-ncn").focus(); };
     };
     drawCats();
+    sh.querySelector("#f-ncn").addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); sh.querySelector("#f-ncadd").click(); } });
     sh.querySelector("#f-ncadd").onclick=async()=>{
       const label=sh.querySelector("#f-ncn").value.trim(); if(!label){ toast("Type a name for the new type"); return; }
       const emoji=sh.querySelector("#f-nce").value.trim()||"📌";
@@ -401,7 +402,8 @@ function editSheet(p){
         id="c-"+(slug||Date.now());
         const doc={label,e:emoji,createdAt:Date.now()};
         customCats[id]=doc; rebuildCats();
-        if(db){ try{ await db.collection("categories").doc(id).set(doc); toast(`Added the type ${emoji} ${label}`); }catch(e){ toast("Couldn't save the new type. Try again."); } }
+        if(db){ db.collection("categories").doc(id).set(doc).catch(()=>toast("Couldn't save the new type. Check your connection.")); }
+        toast(`Added the type ${emoji} ${label}`);
       }
       if(!cats.includes(id)) cats=[...cats,id];
       sh.querySelector("#f-ncn").value=""; sh.querySelector("#f-nce").value=""; ncrow.hidden=true; drawCats(); renderChrome();

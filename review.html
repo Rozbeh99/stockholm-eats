@@ -148,7 +148,7 @@ function editHtml(id,p,s){
     <div><label>Type <span class="hint">The first one (blue) decides the section. To change it, tap Clear and pick again in order.</span></label>
       <button class="b" data-clear="${id}" style="margin-top:6px;justify-self:start">Clear types</button>
       <div class="chips" style="margin-top:6px">${cats.map(([cid,l])=>`<button class="chip${sel[0]===cid?" first":""}" data-c="${cid}" data-id="${id}" aria-pressed="${sel.includes(cid)}">${esc(l)}</button>`).join("")}</div>
-      <div class="newrow" style="margin-top:6px"><input id="ne-${id}" maxlength="8" placeholder="🇮🇷" aria-label="Emoji"><input id="nn-${id}" maxlength="30" placeholder="New type, e.g. Persian" aria-label="New type name"><button class="b" data-newcat="${id}">Add</button></div>
+      <div class="newrow" style="margin-top:6px"><input id="ne-${id}" maxlength="8" placeholder="Emoji" aria-label="Emoji (optional)"><input id="nn-${id}" maxlength="30" placeholder="New type, e.g. Persian" aria-label="New type name"><button class="b" data-newcat="${id}">Add</button></div>
     </div>
     <label>Notes<textarea data-f="note" data-id="${id}" rows="2">${esc(s.note??p.note??"")}</textarea></label>
   </div>`;
